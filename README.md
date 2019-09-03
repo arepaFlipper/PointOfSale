@@ -1,9 +1,9 @@
 # PointOfSale
-This repository has a project about a storage system in a warehouse inventory. It has been developed with the acquired knowledge in the school of Javascript by Platzi.  
+This repository has a project about a storage system at a warehouse inventory. It has been developed with the acquired knowledge in the school of Javascript by Platzi.  
 
 ## General Purpose of the Project
-POS (Point Of Sale) is an App aimed to allow the systematizing the sales and inventory control of a business.
-The objective of this system is to keep the inventory updated according to the sales and income of products to the business, optimize the billing process to streamline and improve business processes, keep track of business expenses and revenues.
+POS (Point Of Sale) is an App aimed to help to systematize the sales and warehouse inventory control of a company.
+The objective of this system is to keep the inventory updated according to the sales and income of products to the companies, optimize the billing process to streamline and improve the business processes, keep track on expenses and revenues of companies.
 
 ## Project scope:
 ### Minimum screens that must be implemented
@@ -42,7 +42,7 @@ The objective of this system is to keep the inventory updated according to the s
 
   **4.** Add, modify, remove products from warehouse inventory.
 
-  **5.** Generate periodic reports on receipts and expenses of warehouse inventory products.
+  **5.** Generate periodic reports on billings and expenses of warehouse inventory products.
 
   **6.** Manage price lists, modify, add or remove prices to products.
 
