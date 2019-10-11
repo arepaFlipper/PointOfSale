@@ -1,52 +1,53 @@
-# PointOfSale
-This repository has a project about a storage system at a warehouse inventory. It has been developed with the acquired knowledge in the school of Javascript by Platzi.  
 
-## General Purpose of the Project
-POS (Point Of Sale) is an App aimed to help to systematize the sales and warehouse inventory control of a company.
-The objective of this system is to keep the inventory updated according to the sales and income of products to the companies, optimize the billing process to streamline and improve the business processes, keep track on expenses and revenues of companies.
+# Point Of Sale
+Este repositorio contiene un proyecto sobre un sistema de almacenamiento en un inventario de almacén. Ha sido desarrollado con los conocimientos adquiridos en la escuela de Javascript por Platzi.
 
-## Project scope:
-### Minimum screens that must be implemented
-  **1.** Sign in / Sign up / Logout screen, add registration and login option with social networks
+## Propósito general del proyecto
+POS (Punto de venta) es una aplicación destinada a ayudar a sistematizar el control de inventario de ventas y almacén de una empresa.
+El objetivo de este sistema es mantener actualizado el inventario de acuerdo con las ventas e ingresos de productos a las empresas, optimizar el proceso de facturación para racionalizar y mejorar los procesos comerciales,realizar un seguimiento de los gastos e ingresos de las empresas.
 
-  **2.** Receipt generation screen
+## Alcance del proyecto:
+### Pantallas mínimas que deben implementarse
+  ** 1. ** Pantalla Iniciar sesión / Registrarse / Cerrar sesión, agregar la opción de registro e inicio de sesión con las redes sociales
 
-  **3.** Warehouse Inventory Management Screen
+  ** 2. ** Pantalla de generación de facturas
 
-  **4.** Reports, administration and expense management screen
+  ** 3. ** Pantalla de gestión de inventario de almacén
 
-## Expected workflow
-  **1.** The customer reach at the point of sale to make the payment of their products.
+  ** 4. ** Pantalla de informes, administración y gestión de gastos
 
-  **2.** The cashier takes the customer's data, in case the customer does not exist, it must register it as a frequent                customer for future purchases.
-         If the customer already exists it must select them.
-         If necessary, the  wizard/operator of the POS system must be able to edit the customer data.
+## Flujo de trabajo esperado
+  ** 1. ** El cliente llega al punto de venta para realizar el pago de sus productos.
 
-  **3.** The operator of the POS system selects in the system each product to buy.
+  ** 2. ** El cajero toma los datos del cliente, en caso de que el cliente no exista, debe registrarlo como un cliente frecuente para futuras compras.
+         Si el cliente ya existe, debe seleccionarlo.
+         Si es necesario, el asistente / operador del sistema POS debe poder editar los datos del cliente.
 
-  **4.** The system validates the existence of the product in the inventory.
+  ** 3. ** El operador del sistema POS selecciona en el sistema cada producto para comprar.
 
-  **5.** Calculate the total cost of the sale.
+  ** 4. ** El sistema valida la existencia del producto en el inventario.
 
-  **6.** The payment is recorded and the data is saved in the system.
+  ** 5. ** Calcular el costo total de la venta.
 
-  **7.** The receipt is generated
+  ** 6. ** El pago se registra y los datos se guardan en el sistema.
 
-## The admin user can:
+  ** 7. ** Se genera la factura
 
-  **1.** Review total sales over a period of time.
+## El usuario administrador puede:
 
-  **2.** Validate the warehouse inventory.
+  ** 1. ** Revise las ventas totales durante un período de tiempo.
 
-  **3.** The system must generate alerts about products chosen to inform that they are running out.
+  ** 2. ** Validar el inventario del almacén.
 
-  **4.** Add, modify, remove products from warehouse inventory.
+  ** 3. ** El sistema debe generar alertas sobre los productos elegidos para informar que se están agotando.
 
-  **5.** Generate periodic reports on billings and expenses of warehouse inventory products.
+  ** 4. ** Agregar, modificar, eliminar productos del inventario del almacén.
 
-  **6.** Manage price lists, modify, add or remove prices to products.
+  ** 5. ** Generar informes periódicos sobre facturación y gastos de productos de inventario de almacén.
 
-  **1.** Consult receipts associated with users.
+  ** 6. ** Administre listas de precios, modifique, agregue o elimine precios a los productos.
 
-## Additional technical requirements
-The system must work on cloud
+  ** 1. ** Consultar facturas asociados a usuarios.
+
+## Requisitos técnicos adicionales
+El sistema debe funcionar en la nub
