@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+//import { Link } from 'react-router-dom';
+import '../assets/styles/Login.scss';
 
 const Login = () => {
   const [form, setValues] = useState({email: ''});
@@ -33,7 +35,6 @@ const Login = () => {
                      placeholder="password"
                      onChange={handleInput} 
                     />
-                    <button className="button">Login</button>
                     <div className="login__container--remember-me">
                         <label>
                             <input
@@ -41,24 +42,27 @@ const Login = () => {
                              name=""
                              id="cbox1"
                              value="checkbox"
-                            /> 
-                         Remember me
+                        /> 
+                     Remember me
                         </label>
-                        <a href="/">forgot my password</a>
+                        <div>
+                        <button className="button">Login</button>
+                        </div>
                     </div>
+                        <a href="/">Forgot my password</a>
                 </form>
                 <section className="login__container--social-media">
                     <div>
                         <img src="../media/google-icon.png" alt="google" />
-                        <a href="/"> Iniciar sesión con Google </a>
+                        <a href="/"> Login with Google </a>
                     </div>
                     <div>
                         <img src="../media/twitter-icon.png" alt="twitter" />
-                        <a href="/">Iniciar sesión con twitter</a>
+                        <a href="/">Login with twitter</a>
                     </div>
                 </section>
-                <p className="login__container--register">No tienes Cuenta? 
-                    <a href="/">Registrate</a>
+                <p className="login__container--register">Don't u have an account yet?{' '}
+                    <a href="/">Resgiter here</a>
                 </p>
             </section>
         </section>
