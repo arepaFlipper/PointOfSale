@@ -1,0 +1,34 @@
+{
+  "name": "PointOfSale",
+  "version": "1.0.0",
+  "description": "This repository has a project about a storage system at a warehouse inventory. It has been developed with the acquired knowledge in the school of Javascript by Platzi.",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack --mode production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/crizy182/PointOfSale.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/crizy182/PointOfSale/issues"
+  },
+  "homepage": "https://github.com/crizy182/PointOfSale#readme",
+  "dependencies": {
+    "react": "^16.10.2",
+    "react-dom": "^16.10.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.6.4",
+    "@babel/preset-env": "^7.6.3",
+    "@babel/preset-react": "^7.6.3",
+    "babel-loader": "^8.0.6",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^3.2.0",
+    "webpack": "^4.41.1",
+    "webpack-cli": "^3.3.9"
+  }
+}
