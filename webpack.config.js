@@ -20,6 +20,15 @@ module.exports = {
           loader: 'babel-loader',
         },
       },
+
+      {
+        test: /\.(png|gif|jpg)$/,
+        use: {
+          loader: 'file-loader',
+          options: { name: 'assets/[hash]:[ext]'}
+        },
+      },
+
       {
         test: /\.html$/,
         use: {
@@ -27,11 +36,12 @@ module.exports = {
         },
       },
       {
-        test: /\.(s*)css$/,
+        test: /\.(s*)css|.styl$/,
         use: [
           { loader: MiniCssExtractPlugin.loader },
           'css-loader',
           'sass-loader',
+          'stylus-loader',
         ],
       },
     ],

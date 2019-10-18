@@ -1,6 +1,5 @@
 import React from 'react';
-
-//import '../styles/components/Products.styl';
+import '../styles/components/Products.styl';
 
 const Products = (props) => {
   const { products } = props;

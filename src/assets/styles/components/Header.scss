@@ -1,10 +1,15 @@
 .header {
     align-items: center;
-    background: #8f57fd;
+    background: #00411d;
     color: white;
     display: flex;
     height: 100px;
     justify-content: space-between;
     top: 0px;
     width: 100%;
+}
+
+.header__img{
+    height: 80%;
+
 }
