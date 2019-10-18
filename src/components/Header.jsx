@@ -7,7 +7,7 @@ const Header = () => (
     <img className='header__img' src='src/assets/static/pos.png' alt='Point Of Sale' />
     <div className='header__menu'>
       <div className='header__menu--profile'>
-        <img src='../assets/user-icon.png' alt='' />
+        <img src='src/assets/static/user-icon.png' alt='' />
         <p>Perfil</p>
       </div>
       <ul>
