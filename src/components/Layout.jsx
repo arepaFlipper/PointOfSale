@@ -9,19 +9,6 @@ import '../styles/components/Layout.styl';
 const Layout = ({ children }) => (
   <div className="Main">
     <Header />
-    <Categories>
-      <Carousel>
-        <CarouselItem />
-        <CarouselItem />
-        <CarouselItem />
-        <CarouselItem />
-        <CarouselItem />
-        <CarouselItem />
-        <CarouselItem />
-        <CarouselItem />
-        <CarouselItem />
-      </Carousel>
-    </Categories>
     {children}
     <Footer />
   </div>

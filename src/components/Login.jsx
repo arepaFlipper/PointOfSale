@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
-//import { Link } from 'react-router-dom';
+import { loginRequest } from '../actions';
+import { connect } from 'react-redux';
 import '../assets/styles/Login.scss';
 
-const Login = () => {
+const Login = (props) => {
   const [form, setValues] = useState({email: ''});
   const handleInput = (event) => {
     setValues({
@@ -12,6 +13,7 @@ const Login = () => {
   };
   const handleSummit = (event) => {
       event.preventDefault();
+      props.loginRequest(form);
       console.log(form);
   }
   return (
@@ -69,4 +71,8 @@ const Login = () => {
   );
 };
 
-export default Login;
+const mapDispatchToProps = {
+    loginRequest,
+};
+
+export default connect(null,mapDispatchToProps)(Login);

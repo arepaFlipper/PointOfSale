@@ -7,6 +7,7 @@ import Login from './components/Login'
 import reducer from './reducers';
 
 const initialState = {
+  "user": {},
   cart: [],
   products: [
     {
@@ -59,7 +60,7 @@ const store = createStore(reducer, initialState, composeEnhancers());
 
 ReactDOM.render(
   <Provider store={store}>
-    <Login />
+    <App />
   </Provider>,
   document.getElementById('app')
 );
