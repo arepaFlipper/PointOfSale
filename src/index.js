@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { createStore, compose } from 'redux';
 import App from './routes/App';
+import Login from './components/Login'
 import reducer from './reducers';
 
 const initialState = {
@@ -58,7 +59,7 @@ const store = createStore(reducer, initialState, composeEnhancers());
 
 ReactDOM.render(
   <Provider store={store}>
-    <App />
+    <Login />
   </Provider>,
   document.getElementById('app')
 );
