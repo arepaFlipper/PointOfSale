@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { createStore, compose } from 'redux';
 import App from './routes/App';
-import Login from './components/Login'
+import Login from './containers/Login'
 import reducer from './reducers';
 
 const initialState = {

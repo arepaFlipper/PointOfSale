@@ -1,5 +1,15 @@
 const reducer = (state, action) => {
   switch (action.type) {
+    case 'LOGIN_REQUEST':
+      return {
+        ...state,
+        user: action.payload
+      }
+    case 'LOGOUT_REQUEST':
+      return {
+        ...state,
+        user: action.payload
+      }
     case 'ADD_TO_CART':
       return {
         ...state,

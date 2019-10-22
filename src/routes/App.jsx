@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
-import Login from '../components/Login';
+import Login from '../containers/Login';
 import Products from '../components/Products'
 import Header from '../components/Header';
 import Categories from '../components/Categories';
@@ -20,8 +20,8 @@ const App = () => (
   <BrowserRouter>
     <Layout>
       <Switch>
-        <Route exact path="/login" component={Home} />
-        <Route exact path="/" component={Login} />
+        <Route exact path="/" component={Home} />
+        <Route exact path="/login" component={Login} />
         <Route exact path="/checkout" component={Checkout} />
         <Route component={NotFound} />
       </Switch>
