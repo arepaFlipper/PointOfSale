@@ -10,6 +10,7 @@ import CarouselItem from '../components/CarouselItem';
 import Footer from '../components/Footer';
 
 import Home from '../containers/Home';
+import Register from '../containers/Signup';
 import Checkout from '../containers/Checkout';
 import Layout from '../components/Layout';
 import NotFound from '../containers/NotFound';
@@ -21,6 +22,7 @@ const App = () => (
     <Layout>
       <Switch>
         <Route exact path="/" component={Login} />
+        <Route exact path="/signup" component={Register} />
         <Route exact path="/home" component={Home} />
         <Route exact path="/checkout" component={Checkout} />
         <Route component={NotFound} />

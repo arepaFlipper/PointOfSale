@@ -58,7 +58,7 @@ const Login = (props) => {
           </div>
         </section>
         <p className="login__container--register">
-          Don't u have an account yet? <a href="/">Resgiter here</a>
+          Don't u have an account yet? <a href="/signup">Sign up here</a>
         </p>
       </section>
     </section>

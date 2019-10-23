@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { logoutRequest } from '../actions';
 import gravatar from '../utils/gravatar';
+import PropTypes from 'prop-types';
 import '../assets/styles/components/Header.scss';
 //import userIcon from '../assets/static/user-icon.png';
 
@@ -44,6 +45,11 @@ const Header = (props) => {
       </div>
     </header>
   );
+};
+
+Header.propTypes ={
+  //user: PropTypes.string.isRequired,
+  logoutRequest: PropTypes.any.isRequired,
 };
 
 const mapStateToProps = (state) =>{
