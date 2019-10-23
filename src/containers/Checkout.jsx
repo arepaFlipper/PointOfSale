@@ -26,7 +26,7 @@ const Checkout = (props) => {
         <div className="Checkout-sidebar">
           <h3>Precio Total:</h3>
           <h4>$</h4>
-          <h4>{`$${cart.reduce((acum,{price}) => acum + price, 0)}`}</h4>
+          <h4>{`${cart.reduce((acum,{price}) => acum + price, 0)}`}</h4>
         </div>
       )}
     </div>
