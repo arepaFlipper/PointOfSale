@@ -1,6 +1,6 @@
 .header {
     align-items: center;
-    background: #00411d;
+    background: #456d56;
     color: white;
     display: flex;
     height: 100px;
@@ -29,13 +29,13 @@
   text-align: right;
 }
 
-.header__menu:hover ul, ul:hover {
-    display: block;
-    position: fixed;
-    align-items: center;
-    background: #00411d;
-    border-radius: 5px;
-}
+// .header__menu:hover ul, ul:hover {
+//     display: block;
+//     position: fixed;
+//     align-items: center;
+//     background: #cc05a1;
+//     border-radius: 5px;
+// }
 
 .header__menu li {
   margin: 10px 0px;

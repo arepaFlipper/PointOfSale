@@ -2,15 +2,18 @@ import React from 'react';
 import Header from './Header';
 import Footer from './Footer';
 import Cart from './Cart';
-import Categories from './Categories';
-import Carousel from './Carousel';
-import CarouselItem from './CarouselItem';
+import SideDrawer from './sideBar/SideDrawer';
 import '../styles/components/Layout.styl';
+import '../assets/styles/components/sideBar/Dashboard.scss';
 
 const Layout = ({ children }) => (
   <div className="Main">
     <Header />
+    <div className="Dashboard__conrainer">
+    <SideDrawer />
+      {/* <div className="sideDrawer"></div> */}
     {children}
+    </div>
     <Cart />
     <Footer />
   </div>
