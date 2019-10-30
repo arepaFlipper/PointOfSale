@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { addToCart } from '../actions';
-import '../styles/components/Products.styl';
+//import '../styles/components/Products.styl';
 
 const Products = (props) => {
   const { products } = props;
@@ -17,7 +17,7 @@ const Products = (props) => {
           <div className="Products-item" key={categorie.id}>
             <img src={categorie.logo} alt={categorie.title} />
             <div className="Products-item-info">
-              <h2>
+              <h2> 
                 {categorie.title}
               </h2>
             </div>

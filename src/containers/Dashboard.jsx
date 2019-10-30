@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import Checkout from './Checkout';
 import Layout from '../components/Layout';
-import Categories from '../components/Categories';
+import House from './House';
 
 
 const Home = () => (
@@ -10,12 +10,11 @@ const Home = () => (
   <BrowserRouter>
       <Switch>
         <Layout>
-            <Route exact path="/home" component={Categories} />
+            <Route exact path="/home" component={House} />
             <Route exact path="/checkout" component={Checkout} />
         </Layout>
       </Switch>
   </BrowserRouter>
-
 
 );
 
