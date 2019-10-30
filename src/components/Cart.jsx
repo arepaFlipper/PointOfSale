@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import '../assets/styles/components/Cart.styl';
 
 const Cart = (props) => (
-  <footer className='Cart'>
+  <footer className='Cart-on'>
         <div className="Cart-checkout">
       <Link to="/checkout">
         <i className="fas fa-shopping-cart" />

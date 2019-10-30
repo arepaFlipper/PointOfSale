@@ -1,7 +1,7 @@
 import React from 'react';
 import Header from './Header';
 import Footer from './Footer';
-import Cart from './Cart';
+
 import SideDrawer from './sideBar/SideDrawer';
 import '../styles/components/Layout.styl';
 import '../assets/styles/components/sideBar/Dashboard.scss';
@@ -13,7 +13,7 @@ const Layout = ({ children }) => (
     <SideDrawer />
     {children}
     </div>
-    <Cart />
+
     <Footer />
   </div>
 );
