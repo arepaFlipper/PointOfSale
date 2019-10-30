@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { addToCart } from '../actions';
-import '../styles/components/Products.styl';
+import '../assets/styles/components/coomponents/Products.styl';
 
 const Products = (props) => {
   const { products } = props;
