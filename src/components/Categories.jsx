@@ -1,11 +1,41 @@
 import React from 'react';
-import '../assets/styles/components/Categories.scss';
+import { connect } from 'react-redux';
+import { addToCart } from '../actions';
+import '../styles/components/Products.styl';
 
-const Categries = ({ children }) => (
-  <div className='Categories'>
-    <h3 className='categories__title'>Categorias</h3>
-    {children}
-  </div>
-);
+const Products = (props) => {
+  const { products } = props;
 
-export default Categries;
+  const handleAddToCart = (product) => {
+    props.addToCart(product);
+  }
+
+  return (
+    <div className="Products">
+      <div className="Products-items">
+        {products.map(categorie => (
+          <div className="Products-item" key={categorie.id}>
+            <img src={categorie.logo} alt={categorie.title} />
+            <div className="Products-item-info">
+              <h2>
+                {categorie.title}
+              </h2>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+const mapStateToProps = state => {
+  return {
+    products: state.products,
+  };
+};
+
+const mapDispatchToProps = {
+  addToCart,
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Products);

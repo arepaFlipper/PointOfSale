@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import Checkout from './Checkout';
 import Layout from '../components/Layout';
-import Products from '../components/Products';
+import Categories from '../components/Categories';
 
 
 const Home = () => (
@@ -10,7 +10,7 @@ const Home = () => (
   <BrowserRouter>
       <Switch>
         <Layout>
-            <Route exact path="/home" component={Products} />
+            <Route exact path="/home" component={Categories} />
             <Route exact path="/checkout" component={Checkout} />
         </Layout>
       </Switch>

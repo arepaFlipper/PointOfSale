@@ -11,7 +11,6 @@ const Layout = ({ children }) => (
     <Header />
     <div className="Dashboard__conrainer">
     <SideDrawer />
-      {/* <div className="sideDrawer"></div> */}
     {children}
     </div>
     <Cart />
