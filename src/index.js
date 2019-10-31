@@ -44,32 +44,32 @@ const initialState = {
   products: [
     {
       "id":{"$oid":"5db8cdf9fc13ae52a4000000"},
-      "logo":"http://dummyimage.com/74x80.bmp/ff4444/ffffff",
+      "logo":"https://lorempixel.com/500/400/food/3",
       "title":"PIZZA"
     },
     {
       "id":{"$oid":"5db8cdf9fc13ae52a4000001"},
-      "logo":"http://dummyimage.com/94x47.png/dddddd/000000",
+      "logo":"https://lorempixel.com/500/400/food",
       "title":"PASTELES"
     },
     {
       "id":{"$oid":"5db8cdf9fc13ae52a4000002"},
-      "logo":"http://dummyimage.com/76x50.jpg/cc0000/ffffff",
+      "logo":"https://lorempixel.com/500/400/food/9",
       "title":"HAMBURGUESAS"
     },
     {
       "id":{"$oid":"5db8cdf9fc13ae52a4000003"},
-      "logo":"http://dummyimage.com/87x87.bmp/ff4444/ffffff",
+      "logo":"https://lorempixel.com/500/400/food/1",
       "title":"BOWLS"
     },
     {
       "id":{"$oid":"5db8cdf9fc13ae52a4000004"},
-      "logo":"http://dummyimage.com/76x48.jpg/5fa2dd/ffffff",
+      "logo":"https://lorempixel.com/500/400/food/8",
       "title":"SUSHI"
     },
     {
       "id":{"$oid":"5db8cdf9fc13ae52a4000005"},
-      "logo":"http://dummyimage.com/74x80.bmp/ff4444/ffffff",
+      "logo":"https://lorempixel.com/500/400/food/5",
       "title":"BEBIDAS"
     }
   ]

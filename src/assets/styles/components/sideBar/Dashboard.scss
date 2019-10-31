@@ -1,9 +1,16 @@
-.Dashboard__conrainer {
-  display: flex;
+.Dashboard__container {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  grid-template-areas: "side products";
   flex-flow: row;
   height: 70vh;
 }
-.sideDrawer {
+.side-drawer {
+  position: fixed;
+  grid-area: side;
   height: 90vh;
-  width: 300px;
+  width: 250px;
+}
+.canvas {
+  grid-area: products;
 }

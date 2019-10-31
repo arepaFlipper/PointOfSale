@@ -5,8 +5,16 @@ body
   padding 0
   color #3c484e
   font-family 'Open Sans', sans-serif
+  overflow hidden
 
 .Main
   padding 0px
   justify-content center
 
+.Dashboard__conrainer
+  display grid
+  grid-template-areas "side products"
+  &side-drawer
+    grid-area side 
+  &canvas 
+    grid-area products

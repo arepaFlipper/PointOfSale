@@ -5,13 +5,13 @@ import '../assets/styles/components/Cart.styl';
 
 const Cart = (props) => (
   <footer className='Cart-on'>
-        <div className="Cart-checkout">
+    <div className="Cart-on-checkout">
+      {props.cart.length > 0 &&
+        <div className="Cart-on-alert">{props.cart.length}</div>
+      }
       <Link to="/checkout">
         <i className="fas fa-shopping-cart" />
       </Link>
-      {props.cart.length > 0 &&
-        <div className="Cart-alert">{props.cart.length}</div>
-      }
     </div>
   </footer>
 );
