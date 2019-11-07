@@ -5,7 +5,7 @@ import { addToCart } from '../actions';
 
 const Categories = (props) => {
   console.log(props);
-  const { products } = props;
+  const { categories } = props;
 
   const handleAddToCart = (product) => {
     props.addToCart(product);
@@ -13,7 +13,7 @@ const Categories = (props) => {
   return (
     <div className="Products">
       <div className="Products-items">
-        {products.map(categorie => (
+        {categories.map(categorie => (
           <div className="Products-item" key={categorie.id}>
             <img src={categorie.logo} alt={categorie.title} />
             <div className="Products-item-info">
@@ -30,7 +30,7 @@ const Categories = (props) => {
 
 const mapStateToProps = state => {
   return {
-    products: state.products,
+    categories: state.categories,
   };
 };
 
