@@ -1,8 +1,8 @@
 import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
-import Checkout from './Checkout';
+import Checkout from './canvas/Checkout';
 import Layout from '../components/Layout';
-import House from './Dashboard';
+import Dashboard from './canvas/Dashboard';
 
 
 const Home = () => (
@@ -10,8 +10,8 @@ const Home = () => (
   <BrowserRouter>
       <Switch>
         <Layout>
-            <Route exact path="/home" component={House} />
-            <Route exact path="/checkout" component={Checkout} />
+            <Route exact path="/spa" component={Dashboard} />
+            <Route exact path="/spa/checkout" component={Checkout} />
         </Layout>
       </Switch>
   </BrowserRouter>

@@ -15,7 +15,7 @@ const Login = (props) => {
     event.preventDefault();
     console.log(form);
     props.loginRequest(form);
-    props.history.push('/home');
+    props.history.push('/spa');
   };
   return (
     <section className="login">

@@ -9,7 +9,7 @@ import Carousel from '../components/Carousel';
 import CarouselItem from '../components/CarouselItem';
 import Footer from '../components/Footer';
 
-import Home from '../containers/Spa';
+import Spa from '../containers/Spa';
 import Register from '../containers/Signup';
 import NotFound from '../containers/NotFound';
 
@@ -20,7 +20,7 @@ const App = () => (
       <Switch>
         <Route exact path="/" component={Login} />
         <Route exact path="/signup" component={Register} />
-        <Route exact path="/home" component={Home} />
+        <Route exact path="/spa" component={Spa} />
         <Route component={NotFound} />
       </Switch>
   </BrowserRouter>

@@ -3,13 +3,13 @@ import { connect } from 'react-redux';
 import { addToCart } from '../actions';
 //import '../styles/components/Products.styl';
 
-const Products = (props) => {
+const Categories = (props) => {
+  console.log(props);
   const { products } = props;
 
   const handleAddToCart = (product) => {
     props.addToCart(product);
   }
-
   return (
     <div className="Products">
       <div className="Products-items">
@@ -38,4 +38,4 @@ const mapDispatchToProps = {
   addToCart,
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(Products);
+export default connect(mapStateToProps, mapDispatchToProps)(Categories);
