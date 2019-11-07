@@ -29,6 +29,7 @@ const Checkout = (props) => {
           <h4>{`${cart.reduce((acum,{price}) => acum + price, 0)}`}</h4>
         </div>
       )}
+      <button>Buy order</button>
     </div>
   )
 };

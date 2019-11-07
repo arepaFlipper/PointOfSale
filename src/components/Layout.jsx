@@ -11,7 +11,7 @@ const Layout = ({ children }) => (
     <div className="Dashboard__container">
       <SideDrawer />
       <div className="canvas">
-      {children}
+        {children}
       </div>
     </div>
 

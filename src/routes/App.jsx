@@ -9,7 +9,7 @@ import Carousel from '../components/Carousel';
 import CarouselItem from '../components/CarouselItem';
 import Footer from '../components/Footer';
 
-import Home from '../containers/Dashboard';
+import Home from '../containers/Spa';
 import Register from '../containers/Signup';
 import NotFound from '../containers/NotFound';
 

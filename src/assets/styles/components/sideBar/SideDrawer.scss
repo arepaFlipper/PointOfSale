@@ -1,6 +1,6 @@
 .side-drawer {
   height: 100vh;
-  background: white;
+  background: rgb(63, 63, 63);
   box-shadow: 1px 0px 7px rgba(0, 0, 0, 0.5);
   border: 1px solid gray;
   // position: fixed;
@@ -27,13 +27,13 @@
 }
 
 .side-drawer a {
-  color: #521751;
+  color: white;
   text-decoration: none;
 }
 
-.side-drawer a:hover,
+.side-drawer .item__container:hover a,
 .side-drawer a:active {
-  color: #fa923f;
+  color: #02ac6b;
 }
 
 .sidebar__container {
@@ -48,7 +48,7 @@
 }
 
 .item__container:hover {
-  background: blue;
+  background: #646464;
 }
 
 /* @media (min-width: 769px) {
