@@ -11,7 +11,7 @@ const Home = () => (
       <Switch>
         <Layout>
             <Route exact path="/spa" component={Dashboard} />
-            <Route exact path="/spa/checkout" component={Checkout} />
+            <Route exact path="/checkout" component={Checkout} />
         </Layout>
       </Switch>
   </BrowserRouter>
