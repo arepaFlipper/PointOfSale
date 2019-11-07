@@ -14,7 +14,7 @@ const initialState = {
         id: { $oid: "5dc47917fc13ae117a000000" },
         title: "Y-Solowarm",
         image: "https://robohash.org/estdoloremsunt.jpg?size=300x300&set=set1",
-        price: "$2.33",
+        price: "2.33",
         description: "The Mentholatum Company"
       },
       {
@@ -22,14 +22,14 @@ const initialState = {
         title: "Zathin",
         image:
           "https://robohash.org/repellendusvoluptasaut.png?size=300x300&set=set1",
-        price: "$9.57",
+        price: "9.57",
         description: "TRP Company"
       },
       {
         id: { $oid: "5dc47917fc13ae117a000002" },
         title: "Greenlam",
         image: "https://robohash.org/absintaccusamus.png?size=300x300&set=set1",
-        price: "$5.29",
+        price: "5.29",
         description: "State of Florida DOH Central Pharmacy"
       },
       {
@@ -37,7 +37,7 @@ const initialState = {
         title: "Quo Lux",
         image:
           "https://robohash.org/fugiatexcepturiperspiciatis.png?size=300x300&set=set1",
-        price: "$7.02",
+        price: "7.02",
         description: "Wal-Mart Stores Inc"
       },
       {
@@ -45,14 +45,14 @@ const initialState = {
         title: "Aerified",
         image:
           "https://robohash.org/natusharumitaque.jpg?size=300x300&set=set1",
-        price: "$3.66",
+        price: "3.66",
         description: "West-ward Pharmaceutical Corp"
       },
       {
         id: { $oid: "5dc47917fc13ae117a000005" },
         title: "Viva",
         image: "https://robohash.org/aliassititaque.png?size=300x300&set=set1",
-        price: "$4.68",
+        price: "4.68",
         description: "Integra Health International, S.A. de C.V."
       },
       {
@@ -60,7 +60,7 @@ const initialState = {
         title: "Quo Lux",
         image:
           "https://robohash.org/rerumofficiaiusto.jpg?size=300x300&set=set1",
-        price: "$0.06",
+        price: "0.06",
         description: "Physicians Total Care, Inc."
       }
   ],

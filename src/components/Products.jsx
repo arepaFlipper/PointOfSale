@@ -19,6 +19,9 @@ const Products = (props) => {
             <div className="Products-item-info">
               <h2>
                 {product.title}
+                <div>
+                {'  '}
+                </div>
                 <span>
                   {product.price}
                 </span>

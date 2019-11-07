@@ -1,3 +1,6 @@
+.Products {
+  padding: 5px;
+}
 .Products-items {
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 1.5rem;
@@ -14,6 +17,7 @@
 }
 .Products-item-info {
   padding: 10px;
+  height: 100px;
 }
 .Products-item-info h2 {
   font-size: 18px;
@@ -25,8 +29,7 @@
   color: #33b13a;
 }
 .Products-item-info p {
-  font-size: 14px;
-  font-weight: 300;
+  font-size: 1vw;
 }
 .Products-item img {
   width: 100%;
@@ -34,6 +37,7 @@
   border-radius: 5px 5px 0 0;
   object-fit: contain;
 }
+
 .Products-item button {
   width: 100%;
   padding: 10px;
@@ -43,7 +47,6 @@
   cursor: pointer;
   font-size: 14px;
   font-weight: 300;
-}
-.Products-item button:hover {
-  background-color: rgba(39, 44, 49, 0.06);
+  position: relative;
+  bottom: 0px;
 }
