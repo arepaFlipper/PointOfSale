@@ -14,7 +14,7 @@ const SideDrawer = (props) => {
         <div className="item__container"><li><a href="/">Dashboard</a></li></div>
         <div className="item__container"><li><a href="/">User Management</a></li></div>
         <div className="item__container"><li><a href="/">Categories</a></li></div>
-        <div className="item__container"><li><a href="/">Products</a></li></div>
+        <div className="item__container"><li><a href="/mprods">Products</a></li></div>
         <div className="item__container"><li><a href="/">Media Content</a></li></div>
         <div className="item__container"><li><a href="/">Sales</a></li></div>
         <div className="item__container"><li><a href="/">Sales Report</a></li></div>

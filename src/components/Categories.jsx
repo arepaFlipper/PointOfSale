@@ -14,7 +14,7 @@ const Categories = (props) => {
     <div className="Products">
       <div className="Products-items">
         {categories.map(categorie => (
-          <div className="Products-item" key={categorie.id}>
+          <div className="Products-item" key={categorie.id.$oid}>
             <img src={categorie.logo} alt={categorie.title} />
             <div className="Products-item-info">
               <h2> 
