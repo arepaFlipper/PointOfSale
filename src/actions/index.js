@@ -13,8 +13,13 @@ export const addToCart = (payload) => ({
   payload,
 });
   
-export const removeFromcart = (payload) => ({
+export const removeFromCart = (payload) => ({
   type: 'REMOVE_FROM_CART',
+  payload,
+});
+
+export const showProductsByCategory = (payload) => ({
+  type: 'VIEW_PRODUCTS_BY_CATEGORIES',
   payload,
 });
   

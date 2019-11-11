@@ -1,28 +1,29 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { addToCart } from '../actions';
-//import '../styles/components/Products.styl';
+import { showProductsByCategory } from '../actions';
 
 const Categories = (props) => {
-  console.log(props);
-  const { categories } = props;
-
-  const handleAddToCart = (product) => {
-    props.addToCart(product);
+  const handleShowOnlyByCategory = (requireCategory) => {
+    props.showProductsByCategory(requireCategory);
   }
+
   return (
     <div className="Products">
       <div className="Products-items">
-        {categories.map(categorie => (
-          <div className="Products-item" key={categorie.id}>
-            <img src={categorie.logo} alt={categorie.title} />
-            <div className="Products-item-info">
-              <h2> 
-                {categorie.title}
-              </h2>
-            </div>
-          </div>
-        ))}
+        {props.categories.map(category => (
+            <button key={category.id} onClick={() => handleShowOnlyByCategory(category.id)}>
+              <div className="Products-item" key={category.id}>
+                  <img src={category.logo} alt={category.title} />
+                  <div className="Products-item-info">
+                    <h2> 
+                      {category.title}
+                    </h2>
+                  </div>
+              </div>
+            </button>
+            )
+          )
+        }
       </div>
     </div>
   );
@@ -35,7 +36,7 @@ const mapStateToProps = state => {
 };
 
 const mapDispatchToProps = {
-  addToCart,
+  showProductsByCategory,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Categories);

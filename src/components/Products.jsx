@@ -4,7 +4,7 @@ import { addToCart } from '../actions';
 import '../assets/styles/components/coomponents/Products.styl';
 
 const Products = (props) => {
-  const { products } = props;
+  const { products, productsByCategory } = props;
 
   const handleAddToCart = (product) => {
     props.addToCart(product);
@@ -13,24 +13,33 @@ const Products = (props) => {
   return (
     <div className="Products">
       <div className="Products-items">
-        {products.map(product => (
-          <div className="Products-item" key={product.id}>
-            <img src={product.image} alt={product.title} />
-            <div className="Products-item-info">
-              <h2>
-                {product.title}
-                <div>
-                {'  '}
+        {
+          products
+            .filter((productFilter) => {
+              if (productsByCategory === "") return true;
+              return productFilter.labels.includes(productsByCategory);
+            })
+            .map((product) => (
+              <button key={product.id} onClick={() => handleAddToCart(product)}>
+                <div className="Products-item">
+                  <img src={product.image} alt={product.title} />
+                  <div className="Products-item-info">
+                    <h2>
+                      {product.title}
+                      <div>
+                      {'  '}
+                      </div>
+                      <span>
+                        {product.price}
+                      </span>
+                    </h2>
+                    <p>{product.description}</p>
+                  </div>
                 </div>
-                <span>
-                  {product.price}
-                </span>
-              </h2>
-              <p>{product.description}</p>
-            </div>
-            <button type="button" onClick={() => handleAddToCart(product)}>Add to cart</button>
-          </div>
-        ))}
+              </button>
+            )
+          )
+        }
       </div>
     </div>
   );
@@ -39,6 +48,7 @@ const Products = (props) => {
 const mapStateToProps = state => {
   return {
     products: state.products,
+    productsByCategory: state.productsByCategory,
   };
 };
 
