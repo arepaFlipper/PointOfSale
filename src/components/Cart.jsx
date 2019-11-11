@@ -8,7 +8,9 @@ const Cart = (props) => (
     <div className="Cart-on-checkout">
       <Link to="/checkout">
         <div className="Cart-on-alert">
-          {props.cart.reduce((accumulate, {amount}) => Math.ceil(accumulate + amount), 0)}
+          <div className="number">
+            {props.cart.reduce((accumulate, {amount}) => Math.ceil(accumulate + amount), 0)}
+          </div>
           <i className="fas fa-shopping-cart" />
         </div>
       </Link>
