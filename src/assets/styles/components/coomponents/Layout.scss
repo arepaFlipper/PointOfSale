@@ -10,12 +10,9 @@ body {
 .Main{
   height: 100%;
   padding: 0px;
-  }
-
-.Dashboard__conrainer{
-  display: grid;
-  grid-template-areas: "side products";
 }
+
+
 .Dashboard__conrainer-side-drawer{
   grid-area: side;
   }
