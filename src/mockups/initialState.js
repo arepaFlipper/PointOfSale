@@ -71,7 +71,7 @@ const initialState = {
         id: "9",
         title: "Fanta Naranja - lata",
         image: "https://live.staticflickr.com/8509/8563942072_01b5850567_t.jpg",
-        price: "3.24",
+        price: 3.24,
         description: "Fanta Naranja en lata 250ml",
         labels: ["drink"]
       },

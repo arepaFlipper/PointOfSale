@@ -9,7 +9,6 @@ const Dashboard = () => (
     <Categories />
     <Products />
   </div>
-  
 );
 
 export default Dashboard;

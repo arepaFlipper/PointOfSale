@@ -9,24 +9,24 @@ const Checkout = (props) => {
     <div className="Checkout">
       <div className="Checkout-content">
         {cart.length > 0 ? <h3>Lista de Pedidos:</h3> : <h2>Sin Pedidos</h2>}
-        {cart.map(item => (
-          <div className="Checkout-item">
+        {cart.map((item, index) => (
+          <div className="Checkout-item" key={index}>
             <div className="Checkout-element">
-              <h4>{item.title}</h4>
-              <span>
-                $
-                {item.price}
-              </span>
+              <h4>{item.product.title}</h4>
+              <span>$ {item.product.price}</span>
+              <span>x {item.amount}</span>
+              <span>($ {item.product.price * item.amount})</span>
             </div>
-            <i className="fas fa-trash-alt" onClick={() => props.removeFromCart(item.id)} />
+            <i className="fas fa-trash-alt" onClick={() => props.removeFromCart(item.idItemCart)} />
           </div>
         ))}
       </div>
       {cart.length > 0 && (
         <div className="Checkout-sidebar">
           <h3>Precio Total:</h3>
-          <h4>$</h4>
-          <h4>{`${cart.reduce((acum,{price}) => Math.round(acum + price), 0)}`}</h4>
+          <h4>$ {`${cart.reduce(
+            (accumulate, item) =>
+            Math.ceil(accumulate + item.product.price * item.amount * 100), 0) / 100}`}</h4>
         </div>
       )}
       <button>Buy order</button>
