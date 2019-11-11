@@ -8,7 +8,7 @@ const Checkout = (props) => {
   return (
     <div className="Checkout">
       <div className="Checkout-content">
-        {cart.length > 0 ? <h3>Lista de Pedidos:</h3> : <h2>Sin Pedidos</h2>}
+        {cart.length > 0 ? <h3>Lista de Pedidos:</h3> : <h2>There is no order</h2>}
         {cart.map((item, index) => (
           <div className="Checkout-item" key={index}>
             <div className="Checkout-element">

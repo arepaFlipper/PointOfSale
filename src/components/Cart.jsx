@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
-import '../assets/styles/components/Cart.styl';
+import '../assets/styles/components/Cart.scss';
 
 const Cart = (props) => (
   <footer className='Cart-on'>

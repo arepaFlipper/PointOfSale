@@ -2,7 +2,7 @@ import React from 'react';
 import Header from './Header';
 import Footer from './Footer';
 import SideDrawer from './sideBar/SideDrawer';
-import '../assets/styles/components/coomponents/Layout.styl';
+import '../assets/styles/components/coomponents/Layout.scss';
 import '../assets/styles/components/sideBar/Dashboard.scss';
 
 const Layout = ({ children }) => (
@@ -14,7 +14,6 @@ const Layout = ({ children }) => (
         {children}
       </div>
     </div>
-
     <Footer />
   </div>
 );
