@@ -2,12 +2,6 @@ import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
 import Login from '../containers/Login';
-import Products from '../components/Products'
-import Header from '../components/Header';
-import Categories from '../components/Categories';
-import Carousel from '../components/Carousel';
-import CarouselItem from '../components/CarouselItem';
-import Footer from '../components/Footer';
 
 import Spa from '../containers/Spa';
 import Register from '../containers/Signup';
