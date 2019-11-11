@@ -1,0 +1,26 @@
+.Checkout{
+  grid-template-columns: 3fr 1fr;
+  grid-gap: 2rem;
+  grid-row-gap: 1.5em;
+  display: grid;
+  }
+.Checkout-item{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.fas{
+  margin: 0 0 0 10px;
+  color: whitesmoke;
+  cursor: pointer;
+}
+.Checkout-element{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  border-bottom: 1px solid #eee;
+}
+.Checkout-sidebar h4{
+  margin: 0;
+}
