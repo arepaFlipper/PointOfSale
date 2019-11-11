@@ -11,13 +11,13 @@ const SideDrawer = (props) => {
   return (
     <nav className={drawerClasses}>
       <ul>
-        <div className="item__container"><li><a href="/">Dashboard</a></li></div>
-        <div className="item__container"><li><a href="/">User Management</a></li></div>
-        <div className="item__container"><li><a href="/">Categories</a></li></div>
-        <div className="item__container"><li><a href="/">Products</a></li></div>
-        <div className="item__container"><li><a href="/">Media Content</a></li></div>
-        <div className="item__container"><li><a href="/">Sales</a></li></div>
-        <div className="item__container"><li><a href="/">Sales Report</a></li></div>
+        <a href="/spa"><div className="item__container"><li>Dashboard</li></div></a>
+        <a href="/"><div className="item__container"><li>User Management</li></div></a>
+        <a href="/"><div className="item__container"><li>Categories</li></div></a>
+        <a href="/"><div className="item__container"><li>Products</li></div></a>
+        <a href="/"><div className="item__container"><li>Media Content</li></div></a>
+        <a href="/"><div className="item__container"><li>Sales</li></div></a>
+        <a href="/"><div className="item__container"><li>Sales Report</li></div></a>
       </ul>
     </nav>
   );
