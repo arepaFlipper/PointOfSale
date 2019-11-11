@@ -1,25 +1,24 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400&display=swap')
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400&display=swap');
 
-body{
+body {
   margin: 0;
   padding: 0;
   color: #3c484e;
-  font-family: 'Open Sans', sans-serif;
   overflow: hidden;
 }
 
 .Main{
-  padding: 0px;
   height: 100%;
-}
+  padding: 0px;
+  }
 
 .Dashboard__conrainer{
   display: grid;
   grid-template-areas: "side products";
 }
-.Dashboard__conrainer side-drawer{
-  grid-area: side; 
-}
-.canvas{
+.Dashboard__conrainer-side-drawer{
+  grid-area: side;
+  }
+.Dashboard__conrainer-canvas {
   grid-area: products;
-} 
+}
