@@ -1,10 +1,10 @@
-.Checkout{
+.Management{
   grid-template-columns: 3fr 1fr;
   grid-gap: 2rem;
   grid-row-gap: 1.5em;
   display: grid;
   }
-.Checkout-item{
+.Management-item{
   align-items: center;
 }
 .fas{
@@ -16,8 +16,9 @@
 #trash{
   color: black;
 }
-.Checkout-element{
+.Management-element{
   display: grid;
+  border: 1px solid black;
   grid-template-areas: "name uPrice qty tPrice trash";
   grid-template-columns: 5vw 2fr repeat(6,1fr);
   justify-content: space-between;
@@ -25,13 +26,13 @@
   width: 100%;
   border-bottom: 1px solid #eee;
 }
-.Checkout-element_id{
+.Management-element_id{
   width: 30px;
 }
-.Checkout-element_container{
+.Management-element_container{
   width: 100px;
 }
-.Checkout-element_title{
+.Management-element_title{
   width: 25vw;
 }
 h4 {

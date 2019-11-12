@@ -1,11 +1,10 @@
-import React from 'react';
+ import React from 'react';
 import { connect } from 'react-redux';
 import { addToCart } from '../actions';
 import '../assets/styles/components/coomponents/Products.scss';
 
 const Products = (props) => {
   const { products, productsByCategory } = props;
-
   const handleAddToCart = (product) => {
     props.addToCart(product);
   }
