@@ -29,10 +29,10 @@ const Products = (props) => {
                       <div>
                       {'  '}
                       </div>
+                      </h2>
                       <span>
-                        {product.price}
+                        <h2>${product.price}</h2>
                       </span>
-                    </h2>
                     <p>{product.description}</p>
                   </div>
                 </div>

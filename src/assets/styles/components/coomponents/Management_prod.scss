@@ -19,11 +19,14 @@
 .Checkout-element{
   display: grid;
   grid-template-areas: "name uPrice qty tPrice trash";
-  grid-template-columns: 300px 1fr 1fr;
+  grid-template-columns: 5vw 2fr repeat(6,1fr);
   justify-content: space-between;
   align-items: center;
   width: 100%;
   border-bottom: 1px solid #eee;
+}
+.Checkout-element_id{
+  width: 30px;
 }
 .Checkout-element_container{
   width: 100px;
