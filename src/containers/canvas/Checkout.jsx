@@ -8,7 +8,20 @@ const Checkout = (props) => {
   return (
     <div className="Checkout">
       <div className="Checkout-content">
+     
+      
+      
+
         {cart.length > 0 ? <h3>Lista de Pedidos:</h3> : <h2>There is no order</h2>}
+          <div className="Checkout-item" >
+            <div className="Checkout-element"> 
+              <div className="Checkout-element_title"><h3>Product</h3></div>
+              <div className="Checkout-element_container"><span><h4>price per unit($)</h4></span></div>
+              <div className="Checkout-element_container"><span><h4>Quantity</h4></span></div>
+              <div className="Checkout-element_container"><span><h4>Total price</h4></span></div>
+              <div className ="fas fa-trash-alt"></div>
+            </div>
+          </div>
         {cart.map((item, index) => (
           <div className="Checkout-item" key={index}>
             <div className="Checkout-element"> 

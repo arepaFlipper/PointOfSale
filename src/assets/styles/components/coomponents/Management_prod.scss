@@ -1,0 +1,36 @@
+.Checkout{
+  grid-template-columns: 3fr 1fr;
+  grid-gap: 2rem;
+  grid-row-gap: 1.5em;
+  display: grid;
+  }
+.Checkout-item{
+  align-items: center;
+}
+.fas{
+  grid-area: trash;
+  margin: 0 0 0 10px;
+  color: whitesmoke;
+  cursor: pointer;
+}
+#trash{
+  color: black;
+}
+.Checkout-element{
+  display: grid;
+  grid-template-areas: "name uPrice qty tPrice trash";
+  grid-template-columns: 300px 1fr 1fr;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  border-bottom: 1px solid #eee;
+}
+.Checkout-element_container{
+  width: 100px;
+}
+.Checkout-element_title{
+  width: 25vw;
+}
+h4 {
+  grid-area: name;
+}
