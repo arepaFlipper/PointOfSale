@@ -1,23 +1,4 @@
-const addToCartAction = function (cart, productToCart) {
-  let exist = false;
-  cart = cart.map((item) => {
-    if (item.idItemCart === productToCart.id) {
-      item.amount += 1;
-      exist = true;
-    }
-    return item;
-  });
-
-  return (
-    exist
-    ? cart
-    : [...cart, {
-      idItemCart: productToCart.id,
-      product: productToCart,
-      amount: 1,
-    }]
-  );
-};
+import { auxAddToCart } from './auxReducers';
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -34,7 +15,7 @@ const reducer = (state, action) => {
     case 'ADD_TO_CART':
       return {
         ...state,
-        cart: addToCartAction(state.cart.slice(), action.payload)
+        cart: auxAddToCart(state.cart.slice(), action.payload)
       }
     case 'REMOVE_FROM_CART':
       return {
