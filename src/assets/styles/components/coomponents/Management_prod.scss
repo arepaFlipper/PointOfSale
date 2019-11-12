@@ -1,39 +1,43 @@
-.Management{
+.Management {
   grid-template-columns: 3fr 1fr;
   grid-gap: 2rem;
   grid-row-gap: 1.5em;
   display: grid;
-  }
-.Management-item{
-  align-items: center;
 }
-.fas{
+.Management-item {
+  justify-items: center;
+}
+.fas {
   grid-area: trash;
   margin: 0 0 0 10px;
   color: whitesmoke;
   cursor: pointer;
 }
-#trash{
+#trash {
   color: black;
 }
-.Management-element{
+.Management-element {
   display: grid;
+  justify-items: center;
   border: 1px solid black;
   grid-template-areas: "name uPrice qty tPrice trash";
-  grid-template-columns: 5vw 2fr repeat(6,1fr);
+  grid-template-columns: 4vw 2fr repeat(6, 1fr);
   justify-content: space-between;
   align-items: center;
-  width: 100%;
-  border-bottom: 1px solid #eee;
+  width: 95vw;
+  border: 1px solid #eee;
 }
-.Management-element_id{
-  width: 30px;
+.Management-element_id {
+  width: 25px;
+  justify-items: center;
+
 }
-.Management-element_container{
+.Management-element_container {
   width: 100px;
 }
-.Management-element_title{
-  width: 25vw;
+.Management-element_title {
+  width: auto;
+  justify-items: center;
 }
 h4 {
   grid-area: name;

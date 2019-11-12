@@ -9,13 +9,13 @@ const ManagementProd = (props) => {
           <div className="Management-content">
               <div className="Management-item" >
                 <div className="Management-element"> 
-                  <div className="Management-element_id">ID</div>
-                  <div className="Management-element_title"><span><h3>Name</h3></span></div>
-                  <div className="Management-element_container"><span><h3>Category </h3> </span></div>
-                  <div className="Management-element_container"><span><h3> In stock</h3> </span></div>
-                  <div className="Management-element_container"><span><h3> Buying price</h3> </span></div>
-                  <div className="Management-element_container"><span><h3> selling price</h3> </span></div>
-                  <div className="Management-element_container"><span><h3> Product expire</h3> </span></div>
+                  <div className="Management-element_id"><h3>ID</h3></div>
+                  <div className="Management-element_title"><h3>Name</h3></div>
+                  <div className="Management-element_container"><h3>Category </h3> </div>
+                  <div className="Management-element_container"><h3> In stock</h3> </div>
+                  <div className="Management-element_container"><h3> Buying price</h3> </div>
+                  <div className="Management-element_container"><h3> selling price</h3> </div>
+                  <div className="Management-element_container"><h3> Product expire</h3> </div>
                 </div>
                 {
                   products.map((product) =>(
@@ -25,8 +25,8 @@ const ManagementProd = (props) => {
                     <div className="Management-element_title"><span><h3>{product.title}</h3></span></div>
                     <div className="Management-element_container"><span><h3>{  } </h3> </span></div>
                     <div className="Management-element_container"><span><h3> many</h3> </span></div>
-                    <div className="Management-element_container"><span><h3>{product.price -1} </h3> </span></div>
-                    <div className="Management-element_container"><span><h3>{product.price} </h3> </span></div>
+                    <div className="Management-element_container"><span><h3>{} </h3> </span></div>
+                    <div className="Management-element_container"><span><h3>{} </h3> </span></div>
                     <div className="Management-element_container"><span><h3> Tomorrow</h3> </span></div>
                 </div>
                   
