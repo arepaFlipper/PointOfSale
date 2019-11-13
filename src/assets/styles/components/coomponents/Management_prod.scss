@@ -1,4 +1,9 @@
-.Management {
+.Management-top {
+  display: flex;
+  justify-content: space-around;
+}
+
+.Management-content {
   grid-template-columns: 3fr 1fr;
   grid-gap: 2rem;
   grid-row-gap: 1.5em;

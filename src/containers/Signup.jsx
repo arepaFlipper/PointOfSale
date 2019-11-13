@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
 import { connect } from 'react-redux';
-import { Link } from 'react-router-dom';
-import  { registerRequest } from '../actions';
 import '../assets/styles/components/Register.scss';
 
 const Register = (props) => {
@@ -27,7 +25,7 @@ const Register = (props) => {
     <section className='register'>
       <section className='register__container'>
         <h2>
-            Regístrate
+            Sign Up
         </h2>
         <form className='register__container--form' onSubmit={handleSummit}>
           <input
