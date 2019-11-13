@@ -11,13 +11,16 @@ const Footer = (props) => {
       
       <footer className='footer'>
       <div className="spacer"></div>
-        <h3 className="footer_text">Todos los Izquierdos Reservados</h3> 
+        <h3 className="footer_text">All lefts reserverd</h3> 
         <div className="spacer"></div>
-        <a className="footer_text" href='/'>Terminos de uso</a>
+        <a className="footer_text" href='/'>Terms of service</a>
         <div className="spacer"></div>
-        <a className="footer_text" href='/'>Declaración de privacidad</a>
+        <a className="footer_text" href='/'>Privacy Policy</a>
         <div className="spacer"></div>
-        <a className="footer_text" href='/'>Centro de ayuda</a>
+        <a className="footer_text" href='/'>Help center</a>
+        <div className="spacer"></div>
+        <a className="footer_text" href='/'>FAQ's</a>
+
       </footer>
     </>
   );

@@ -20,23 +20,19 @@ const Products = (props) => {
               return productFilter.categories.includes(productsByCategory);
             })
             .map((product) => (
-              <button key={product.id} onClick={() => handleAddToCart(product)}>
-                <div className="Products-item">
+              <div className="Products-item">
                   <img src={product.image} alt={product.title} />
                   <div className="Products-item-info">
-                    <h2>
-                      {product.title}
-                      <div>
-                      {'  '}
-                      </div>
-                      </h2>
-                      <span>
-                        <h2>${product.sellingPrice}</h2>
-                      </span>
-                    <p>{product.description}</p>
+                    <div>
+                    <h5>{product.title}</h5>
+                    </div>
+                      <h4>${product.sellingPrice}</h4>
                   </div>
-                </div>
+                    <h6>{product.description}</h6>
+                <button key={product.id} onClick={() => handleAddToCart(product)}>
+                  <h3>Add to Cart</h3>
               </button>
+                </div>
             )
           )
         }

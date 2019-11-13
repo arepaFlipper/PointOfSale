@@ -134,12 +134,12 @@ const initialState = {
     },
     {
       id: "dessert",
-      title: "PASTELES",
+      title: "DESSERTS",
       logo: "https://cdn.pixabay.com/photo/2016/03/27/22/38/cake-1284548_960_720.jpg"
     },
     {
       id: "burger",
-      title: "HAMBURGUESAS",
+      title: "BURGERS",
       logo: "https://live.staticflickr.com/8631/16505521041_b7d25f7dc8_t.jpg"
     },
     {
@@ -154,7 +154,7 @@ const initialState = {
     },
     {
       id: "drink",
-      title: "BEBIDAS",
+      title: "DRINKS",
       logo: "https://cdn.pixabay.com/photo/2018/04/08/13/17/glass-3301200_960_720.jpg"
     },
   ],
