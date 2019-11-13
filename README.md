@@ -7,11 +7,17 @@ If you find any bug, and a fix for that bug, please leave a comment on the githu
 
 ## Installing this application is fairly easy, just follow these steps:
   **1.** Download the lastest version using git typing the following command:
+
          `$ git clone git@github.com:crizy182/PointOfSale.git`
+
   **2.** install the dependecies:
+
         `$ npm install`
+        
   **3.** Run the following command on the project's folder:
+  
         `$ npm run start`
+
 
 ## General Purpose of the Project
 POS (Point Of Sale) is an App aimed to help to systematize the sales and warehouse inventory control of a company.

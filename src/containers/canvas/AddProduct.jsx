@@ -14,7 +14,7 @@ const AddProduct = (props) => {
 
   const handleAddProduct = () => {
     props.addNewProduct({
-      title, labels, price, 
+      title, categories, instock, buyingPrice, sellingPrice 
     });
   }
   return(
@@ -50,7 +50,7 @@ const AddProduct = (props) => {
               type='number'
               min="0"
               placeholder='Quantity'
-              onChange=""
+              onChange={handleSummit}
             />
             <input
               name='price'
@@ -60,7 +60,7 @@ const AddProduct = (props) => {
               step='any'
               pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$"
               placeholder='Buying price'
-              onChange=""
+              onChange={handleSummit}
             />
             <input
               name='price'
