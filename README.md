@@ -1,5 +1,17 @@
 # PointOfSale
-This repository has a project about a storage system at a warehouse inventory. It has been developed with the acquired knowledge in the school of Javascript by Platzi.  
+This Web App was initially created by Jorge Nemoga, Cristian Tovar and Santiago Jimenez, using JavaScript, React.js Redux, Webpack and SASS.
+
+POS is a Web App based Point of Sale System, that will allow you to keep tracking of the quantity buying and selling price of the products existing in your warehouse or business. When creating a new products, you can set a quantity,buying and selling price.
+
+If you find any bug, and a fix for that bug, please leave a comment on the github page for this project and i will push the change into the master branch.
+
+## Installing this application is fairly easy, just follow these steps:
+  **1.** Download the lastest version using git typing the following command:
+         `$ git clone git@github.com:crizy182/PointOfSale.git`
+  **2.** install the dependecies:
+        `$ npm install`
+  **3.** Run the following command on the project's folder:
+        `$ npm run start`
 
 ## General Purpose of the Project
 POS (Point Of Sale) is an App aimed to help to systematize the sales and warehouse inventory control of a company.
@@ -50,3 +62,5 @@ The objective of this system is to keep the inventory updated according to the s
 
 ## Additional technical requirements
 The system must work on cloud
+
+# Don't forget to give us feedback, anyone will be welcomed :)
