@@ -1,11 +1,16 @@
 import React from 'react';
 import { connect } from 'react-redux'
+import { Link } from 'react-router-dom';
 import '../../assets/styles/components/coomponents/Management_prod.scss';
 
 const ManagementProd = (props) => {
   const { products } = props;
   return(
+    <>
     <div className="Management">
+      <div className="Management-top"><div></div><Link to={`/add`}><button>ADD NEW</button></Link></div>
+      <section>      
+      </section>
           <div className="Management-content">
               <div className="Management-item" >
                 <div className="Management-element"> 
@@ -37,6 +42,7 @@ const ManagementProd = (props) => {
               
           </div>
     </div>
+    </>
   );
 };
 const mapStateToProps = state => {
