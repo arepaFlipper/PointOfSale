@@ -29,8 +29,8 @@ const ManagementProd = (props) => {
                     <div className="Management-element_title"><span><h3>{product.title}</h3></span></div>
                     <div className="Management-element_container"><span><h3>{  } </h3> </span></div>
                     <div className="Management-element_container"><span><h3> many</h3> </span></div>
-                    <div className="Management-element_container"><span><h3>${Math.ceil((product.price -1) * 100) / 100} </h3> </span></div>
-                    <div className="Management-element_container"><span><h3>${Math.ceil(product.price * 100) / 100} </h3> </span></div>
+                    <div className="Management-element_container"><span><h3>${Math.ceil(product.buyingPrice * 100) / 100} </h3> </span></div>
+                    <div className="Management-element_container"><span><h3>${Math.ceil(product.sellingPrice * 100) / 100} </h3> </span></div>
                     <div className="Management-element_container"><span><h3> Tomorrow</h3> </span></div>
                 </div>
                   )

@@ -11,12 +11,13 @@ const Products = (props) => {
 
   return (
     <div className="Products">
+      <h2>Products</h2>
       <div className="Products-items">
         {
           products
             .filter((productFilter) => {
               if (productsByCategory === "") return true;
-              return productFilter.labels.includes(productsByCategory);
+              return productFilter.categories.includes(productsByCategory);
             })
             .map((product) => (
               <button key={product.id} onClick={() => handleAddToCart(product)}>
@@ -30,7 +31,7 @@ const Products = (props) => {
                       </div>
                       </h2>
                       <span>
-                        <h2>${product.price}</h2>
+                        <h2>${product.sellingPrice}</h2>
                       </span>
                     <p>{product.description}</p>
                   </div>

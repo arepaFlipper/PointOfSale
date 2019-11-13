@@ -9,6 +9,7 @@ const Categories = (props) => {
 
   return (
     <div className="Products">
+      <h2>Categories</h2>
       <div className="Products-items">
         {props.categories.map(category => (
             <button key={category.id} onClick={() => handleShowOnlyByCategory(category.id)}>
