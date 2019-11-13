@@ -27,6 +27,11 @@ const reducer = (state, action) => {
         ...state,
         productsByCategory: (state.productsByCategory === action.payload) ? "" : action.payload
       }
+    case 'ADD_NEW_PRODUCT':
+      return{
+        ...state,
+        user: action.payload
+      }
     default:
       return state;
   }

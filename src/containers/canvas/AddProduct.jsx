@@ -1,9 +1,22 @@
 import React from 'react';
-import { connect } from 'react-redux'
+import { connect } from 'react-redux';
+import { addNewProduct } from '../../actions/index';
 import '../../assets/styles/components/coomponents/AddProduct.scss';
 
 const AddProduct = (props) => {
   const { products } = props;
+
+  const handleSummit = (event) => {
+    event.preventDefault();
+    props.addNewProduct(form);
+    props.history.push('/products');
+  }
+
+  const handleAddProduct = () => {
+    props.addNewProduct({
+      title, labels, price, 
+    });
+  }
   return(
     <div className="Management">
       <section className='Add__container'>
@@ -16,7 +29,7 @@ const AddProduct = (props) => {
             className='input-name'
             type='text'
             placeholder='Product Title'
-            onChange=""
+            onChange={handleSummit}
           />
 
           <div className="dropdown">
@@ -32,32 +45,37 @@ const AddProduct = (props) => {
           </div>
           <div className="horizonter">
             <input
-              name='password'
+              name='qty'
               className='add-input'
-              type='password'
+              type='number'
+              min="0"
               placeholder='Quantity'
               onChange=""
             />
-            <span></span>
             <input
-              name='password'
+              name='price'
               className='add-input'
-              type='password'
+              type='number'
+              min='0'
+              step='any'
+              pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$"
               placeholder='Buying price'
               onChange=""
             />
-            <span></span>
             <input
-              name='password'
+              name='price'
               className='add-input'
-              type='password'
+              type='number'
+              min='0'
+              step='any'
+              pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$"
               placeholder='Selling price'
-              onChange=""
+              onChange={handleSummit}
             />
 
           </div>
           <div className="Add__container--form__button">
-          <button className='button'>
+          <button className='button' onClick={handleAddProduct}>
               Add product
           </button>
           </div>
@@ -73,4 +91,8 @@ const mapStateToProps = state => {
   };
 };
 
-export default connect(mapStateToProps,null)(AddProduct);
+const mapDispatchToProps = {
+  addNewProduct,
+}
+
+export default connect(mapStateToProps,mapDispatchToProps)(AddProduct);

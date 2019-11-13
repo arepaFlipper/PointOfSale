@@ -6,7 +6,6 @@ import '../../assets/styles/components/coomponents/Management_prod.scss';
 const ManagementProd = (props) => {
   const { products } = props;
   return(
-    <>
     <div className="Management">
       <div className="Management-top"><div></div><Link to={`/add`}><button>ADD NEW</button></Link></div>
       <section>      
@@ -30,11 +29,10 @@ const ManagementProd = (props) => {
                     <div className="Management-element_title"><span><h3>{product.title}</h3></span></div>
                     <div className="Management-element_container"><span><h3>{  } </h3> </span></div>
                     <div className="Management-element_container"><span><h3> many</h3> </span></div>
-                    <div className="Management-element_container"><span><h3>{} </h3> </span></div>
-                    <div className="Management-element_container"><span><h3>{} </h3> </span></div>
+                    <div className="Management-element_container"><span><h3>${Math.ceil((product.price -1) * 100) / 100} </h3> </span></div>
+                    <div className="Management-element_container"><span><h3>${Math.ceil(product.price * 100) / 100} </h3> </span></div>
                     <div className="Management-element_container"><span><h3> Tomorrow</h3> </span></div>
                 </div>
-                  
                   )
                   )
                 }
@@ -42,7 +40,6 @@ const ManagementProd = (props) => {
               
           </div>
     </div>
-    </>
   );
 };
 const mapStateToProps = state => {

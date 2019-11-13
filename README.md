@@ -58,7 +58,7 @@ The objective of this system is to keep the inventory updated according to the s
 
   **6.** Manage price lists, modify, add or remove prices to products.
 
-  **1.** Consult receipts associated with users.
+  **7.** Consult receipts associated with users.
 
 ## Additional technical requirements
 The system must work on cloud

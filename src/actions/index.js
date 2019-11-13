@@ -22,4 +22,8 @@ export const showProductsByCategory = (payload) => ({
   type: 'VIEW_PRODUCTS_BY_CATEGORIES',
   payload,
 });
-  
+
+export const addNewProduct = (payload) => ({
+  type: 'ADD_NEW_PRODUCT',
+  payload,
+})

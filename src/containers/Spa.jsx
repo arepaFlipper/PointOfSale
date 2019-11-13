@@ -7,7 +7,6 @@ import ManagementProd from './canvas/Management_prod';
 import AddProduct from './canvas/AddProduct';
 
 const Home = () => (
-  // <sideDrawer />
   <BrowserRouter>
       <Switch>
         <Layout>
