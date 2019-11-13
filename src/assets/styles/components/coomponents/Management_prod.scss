@@ -40,9 +40,12 @@
 .Management-element_container {
   width: 100px;
 }
-.Management-element_title {
+.Management-element-title {
   width: auto;
   justify-items: center;
+}
+.Management-element-categorie {
+  display: inline;
 }
 h4 {
   grid-area: name;
