@@ -33,7 +33,7 @@ const AddProduct = (props) => {
           <div className="horizonter">
             <input
               name='password'
-              className='input'
+              className='add-input'
               type='password'
               placeholder='Quantity'
               onChange=""
@@ -41,7 +41,7 @@ const AddProduct = (props) => {
             <span></span>
             <input
               name='password'
-              className='input'
+              className='add-input'
               type='password'
               placeholder='Buying price'
               onChange=""
@@ -49,7 +49,7 @@ const AddProduct = (props) => {
             <span></span>
             <input
               name='password'
-              className='input'
+              className='add-input'
               type='password'
               placeholder='Selling price'
               onChange=""
