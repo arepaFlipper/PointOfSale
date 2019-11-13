@@ -8,10 +8,9 @@
 .side-drawer {
   position: fixed;
   grid-area: side;
-  height: 90vh;
   width: 250px;
 }
 .canvas {
   grid-area: products;
-  padding: 0px 5px;
+  padding: 0px 5px 50px;
 }

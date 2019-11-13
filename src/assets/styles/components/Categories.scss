@@ -1,9 +1,55 @@
-.categories__title {
-    background: #2f2e31;
-    color: white;
-    font-size: 16px;
-    margin-top: -16px;
-    position: absolute;
-    padding-left: 30px;
-    width: 100%;
-  }
+.Categories {
+  padding: 5px;
+}
+.Categories-items{
+  display: grid;
+  justify-content: space-between;
+  grid-gap: 10px;
+  grid-template-columns: repeat(6, 1fr);
+}
+.Categories-item {
+  width: 100%;
+  padding: 0%;
+  text-decoration: none;
+  box-shadow: 8px 14px 38px rgba(39,44,49,.06), 1px 3px 8px rgba(39,44,49,.03);
+  border-radius: 30px;
+  margin: 5px;
+  position: relative;
+  overflow: hidden;
+  height: auto;
+  } 
+.Categories-item-info {
+  padding: 10px;
+}
+.Categories-item-info h2 {
+  font-size: 1vw;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+}
+
+.Categories-item img {
+  width: 100%;
+  position: relative;
+  top: -5px;
+}
+
+.Categories-item button {
+  width: 100%;
+  padding: 10px;
+  border-radius: 0px 0px 5px 5px;
+  border: 0px;
+  outline: 0;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 300;
+  position: absolute;
+  bottom: 0px;
+}
+
+.Categories-item button:hover {
+  background-color: rgba(39,44,49,.06);
+  transform: scale(1.1);
+}
+
+

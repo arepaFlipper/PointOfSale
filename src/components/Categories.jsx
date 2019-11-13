@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { showProductsByCategory } from '../actions';
+import '../assets/styles/components/Categories.scss';
 
 const Categories = (props) => {
   const handleShowOnlyByCategory = (requireCategory) => {
@@ -8,14 +9,14 @@ const Categories = (props) => {
   }
 
   return (
-    <div className="Products">
+    <div className="Categories">
       <h2>Categories</h2>
-      <div className="Products-items">
+      <div className="Categories-items">
         {props.categories.map(category => (
-            <button key={category.id} onClick={() => handleShowOnlyByCategory(category.id)}>
-              <div className="Products-item" key={category.id}>
+            <button className="Categories-item" key={category.id} onClick={() => handleShowOnlyByCategory(category.id)}>
+              <div  key={category.id}>
                   <img src={category.logo} alt={category.title} />
-                  <div className="Products-item-info">
+                  <div className="Categories-item-info">
                     <h2> 
                       {category.title}
                     </h2>
