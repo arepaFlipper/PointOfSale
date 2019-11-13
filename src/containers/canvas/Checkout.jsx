@@ -28,7 +28,7 @@ const Checkout = (props) => {
               <div className="Checkout-element_title"><h4>{item.product.title}</h4></div>
               <div className="Checkout-element_container"><span>$ {item.product.price}</span></div>
               <div className="Checkout-element_container"><span>x {item.amount}</span></div>
-              <div className="Checkout-element_container"><span>$ {item.product.price * item.amount}</span></div>
+              <div className="Checkout-element_container"><span>$ {Math.ceil(item.product.price * 100 * item.amount) / 100}</span></div>
               <i id="trash" className="fas fa-trash-alt" onClick={() => props.removeFromCart(item.idItemCart)} />
             </div>
           </div>
