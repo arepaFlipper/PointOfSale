@@ -8,23 +8,21 @@ const AddProduct = (props) => {
   const [form, setValues] = React.useState({
     id: '',
     title: "", 
-    categories: [""], 
+    categories: [], 
     instock: 0, 
     buyingPrice: 0, 
     sellingPrice: 0
   });
 
   const handleInput = (event) => {
-    console.log(event);
     setValues({
       ...form,
-      [event.target.name]: event.target.value,
+      [event.target.name]: event.target.name==="categories" ? [event.target.value] : event.target.value,
     });
   };
   
   const handleSummit = (event) => {
     event.preventDefault();
-    console.log(form);
     props.addNewProduct(form);
     props.history.push('/products');
   }
@@ -44,17 +42,18 @@ const AddProduct = (props) => {
             onChange={handleInput}
           />
           <select
-           name="category"
+           name="categories"
            placeholder="Select an existing category" 
-           required onSubmit={handleInput}
-          >
-            <option value="" selected disabled>Select an existing category </option>
+           required
+           onChange={handleInput}
+           >
+            {/* <option value="selected" disabled>Select an existing category </option> */}
             {props.categories.map((category)=>(
               <option
                key={category.id}
-               value={category.title}
+               value={category.id}
               >
-                {category.title}
+                {category.id}
               </option>
             ))}
           </select>

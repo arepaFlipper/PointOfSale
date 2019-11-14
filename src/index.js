@@ -5,7 +5,7 @@ import { createStore, compose } from "redux";
 import App from "./routes/App";
 import Login from "./containers/Login";
 import reducer from "./reducers";
-import initialState from './mockups/initialState';
+import initialState from './mocks/initialState';
 
 const composeEnhancers =
   (typeof window !== "undefined" &&
