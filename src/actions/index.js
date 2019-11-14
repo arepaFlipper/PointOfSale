@@ -27,3 +27,8 @@ export const addNewProduct = (payload) => ({
   type: 'ADD_NEW_PRODUCT',
   payload,
 })
+
+export const removeProduct = (payload) => ({
+  type: 'REMOVE_PRODUCT',
+  payload,
+});

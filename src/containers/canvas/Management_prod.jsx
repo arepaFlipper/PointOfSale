@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux'
 import { Link } from 'react-router-dom';
 import '../../assets/styles/components/coomponents/Management_prod.scss';
+import { removeProduct } from '../../actions/index'
 
 const ManagementProd = (props) => {
   const { products } = props;
@@ -31,7 +32,7 @@ const ManagementProd = (props) => {
                     <div className="Management-element_container"><span><h3> many</h3> </span></div>
                     <div className="Management-element_container"><span><h3>${Math.ceil(product.buyingPrice * 100) / 100} </h3> </span></div>
                     <div className="Management-element_container"><span><h3>${Math.ceil(product.sellingPrice * 100) / 100} </h3> </span></div>
-                    <div className="Management-element_container"><span><h3> Tomorrow</h3> </span></div>
+                    <div><i id="trash" className="fas fa-trash-alt" onClick={() => props.removeProduct(product.id)} /></div>
                 </div>
                   )
                   )
@@ -49,4 +50,8 @@ const mapStateToProps = state => {
   };
 };
 
-export default connect(mapStateToProps,null)(ManagementProd);
+const mapDispatchToProps = {
+  removeProduct,
+}
+
+export default connect(mapStateToProps,mapDispatchToProps)(ManagementProd);
