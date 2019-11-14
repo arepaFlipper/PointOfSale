@@ -13,7 +13,7 @@ const SideDrawer = (props) => {
       <ul>
         < Link to="/spa"><div className="item__container"><li>Dashboard</li></div></ Link>
         < Link to="/"><div className="item__container"><li>User Management</li></div></ Link>
-        < Link to="/"><div className="item__container"><li>Categories</li></div></ Link>
+        < Link to="/cat"><div className="item__container"><li>Categories</li></div></ Link>
         < Link to="/products"><div className="item__container"><li>Products</li></div></Link>
         < Link to="/"><div className="item__container"><li>Media Content</li></div></ Link>
         < Link to="/"><div className="item__container"><li>Sales</li></div></ Link>

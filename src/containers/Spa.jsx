@@ -5,6 +5,7 @@ import Layout from '../components/Layout';
 import Dashboard from './canvas/Dashboard';
 import ManagementProd from './canvas/Management_prod';
 import AddProduct from './canvas/AddProduct';
+import ManagementCat from './canvas/Management_cat';
 
 const Home = () => (
   <BrowserRouter>
@@ -13,6 +14,7 @@ const Home = () => (
             <Route exact path="/spa" component={Dashboard} />
             <Route exact path="/checkout" component={Checkout} />
             <Route exact path="/products" component={ManagementProd} />
+            <Route exact path="/cat" component={ManagementCat} />
             <Route exact path="/add" component={AddProduct} />
           </Switch>
         </Layout>
