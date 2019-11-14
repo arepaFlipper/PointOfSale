@@ -8,14 +8,14 @@ import AddProduct from './canvas/AddProduct';
 
 const Home = () => (
   <BrowserRouter>
-      <Switch>
         <Layout>
+          <Switch>
             <Route exact path="/spa" component={Dashboard} />
             <Route exact path="/checkout" component={Checkout} />
             <Route exact path="/products" component={ManagementProd} />
             <Route exact path="/add" component={AddProduct} />
+          </Switch>
         </Layout>
-      </Switch>
   </BrowserRouter>
 
 );

@@ -30,7 +30,7 @@ const reducer = (state, action) => {
     case 'ADD_NEW_PRODUCT':
       return{
         ...state,
-        user: action.payload
+        products: [...state.products, action.payload]
       }
     default:
       return state;

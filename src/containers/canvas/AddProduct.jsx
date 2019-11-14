@@ -4,19 +4,27 @@ import { addNewProduct } from '../../actions/index';
 import '../../assets/styles/components/coomponents/AddProduct.scss';
 
 const AddProduct = (props) => {
-  const { title, categories, instock, buyingPrice, sellingPrice  } = props.products;
 
+  const [form, setValues] = React.useState({
+    id: '',
+    title: "", 
+    categories: [""], 
+    instock: 0, 
+    buyingPrice: 0, 
+    sellingPrice: 0
+  });
+
+  const handleInput = (event) => {
+    setValues({
+      ...form,
+      [event.target.name]: event.target.value,
+    });
+  };
+  
   const handleSummit = (event) => {
     event.preventDefault();
     props.addNewProduct(form);
     props.history.push('/products');
-  }
-
-  const handleAddProduct = () => {
-    console.log('here is the cart')
-    // props.addNewProduct({
-    //   title, categories, instock, buyingPrice, sellingPrice 
-    // });
   }
   return(
     <div className="Management">
@@ -24,16 +32,16 @@ const AddProduct = (props) => {
         <h2>
             ADD NEW PRODUCT
         </h2>
-        <form className='Add__container--form' >
+        <form className='Add__container--form' onSubmit={handleSummit} >
           <input
-            name='name'
+            name='title'
             className='input-name'
             type='text'
             placeholder='Product Title'
-            // onChange={handleSummit}
+            onChange={handleInput}
           />
 
-          <div className="dropdown">
+          {/* <div className="dropdown">
             <button className="dropbtn">Choose Category</button>
             <div className="dropdown-content">
               <a href="#">PIZZA</a>
@@ -43,51 +51,51 @@ const AddProduct = (props) => {
               <a href="#">SUSHI</a>
               <a href="#">BEBIDAS</a>
             </div>
-          </div>
+          </div> */}
           <div className="horizonter">
             <input
-              name='qty'
+              name='inStock'
               className='add-input'
               type='number'
               min="0"
               placeholder='Quantity'
-              // onChange={handleSummit}
+              onChange={handleInput}
             />
             <input
-              name='price'
+              name='buyingPrice'
               className='add-input'
               type='number'
               min='0'
               step='any'
               pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$"
               placeholder='Buying price'
-              // onChange={handleSummit}
+              onChange={handleInput}
             />
             <input
-              name='price'
+              name='sellingPrice'
               className='add-input'
               type='number'
               min='0'
               step='any'
               pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$"
               placeholder='Selling price'
-              // onChange={handleSummit}
+              onChange={handleInput}
             />
 
           </div>
           <div className="Add__container--form__button">
-          <button className='button' type="submit" onClick={()=>handleAddProduct()}>
+          <button className='button' type="submit">
               Add product
           </button>
           </div>
         </form>
+
       </section>             
     </div>
   );
 };
 const mapStateToProps = state => {
   return {
-    products: state.products,
     productsByCategory: state.productsByCategory,
   };
 };

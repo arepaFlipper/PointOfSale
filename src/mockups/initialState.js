@@ -93,7 +93,6 @@ const initialState = {
         sellingPrice: 3.24,
         description: "Fanta Naranja en lata 250ml",
       },
-      ,
       {
         id: "10",
         title: "Camaron en la nube voladora",
@@ -104,7 +103,6 @@ const initialState = {
         sellingPrice: 10.00,
         description: "Camaron sobre arroz y cinta dulce",
       },
-      ,
       {
         id: "11",
         title: "Mini spicy burger",
