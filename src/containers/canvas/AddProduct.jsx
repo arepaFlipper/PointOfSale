@@ -15,6 +15,7 @@ const AddProduct = (props) => {
   });
 
   const handleInput = (event) => {
+    console.log(event);
     setValues({
       ...form,
       [event.target.name]: event.target.value,
@@ -23,6 +24,7 @@ const AddProduct = (props) => {
   
   const handleSummit = (event) => {
     event.preventDefault();
+    console.log(form);
     props.addNewProduct(form);
     props.history.push('/products');
   }
@@ -32,6 +34,7 @@ const AddProduct = (props) => {
         <h2>
             ADD NEW PRODUCT
         </h2>
+
         <form className='Add__container--form' onSubmit={handleSummit} >
           <input
             name='title'
@@ -40,18 +43,22 @@ const AddProduct = (props) => {
             placeholder='Product Title'
             onChange={handleInput}
           />
+          <select
+           name="category"
+           placeholder="Select an existing category" 
+           required onSubmit={handleInput}
+          >
+            <option value="" selected disabled>Select an existing category </option>
+            {props.categories.map((category)=>(
+              <option
+               key={category.id}
+               value={category.title}
+              >
+                {category.title}
+              </option>
+            ))}
+          </select>
 
-          {/* <div className="dropdown">
-            <button className="dropbtn">Choose Category</button>
-            <div className="dropdown-content">
-              <a href="#">PIZZA</a>
-              <a href="#">PASTELES</a>
-              <a href="#">HAMBURGUESAS</a>
-              <a href="#">BOWLS</a>
-              <a href="#">SUSHI</a>
-              <a href="#">BEBIDAS</a>
-            </div>
-          </div> */}
           <div className="horizonter">
             <input
               name='inStock'
@@ -96,6 +103,7 @@ const AddProduct = (props) => {
 };
 const mapStateToProps = state => {
   return {
+    categories: state.categories,
     productsByCategory: state.productsByCategory,
   };
 };

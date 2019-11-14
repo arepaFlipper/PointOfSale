@@ -58,3 +58,18 @@
 .dropdown:hover .dropbtn {
   background-color: #4e584e;
 }
+
+form select:invalid {
+  color: rgba(134, 134, 134, 0.534);
+}
+
+form select option:first-child {
+  color: rgba(128, 128, 128, 0.637);
+}
+
+form select:invalid option:not(:first-child) {
+  color: black;
+}
+select {
+  width: 16vw;
+}
