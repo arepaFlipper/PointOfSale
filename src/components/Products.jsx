@@ -20,7 +20,7 @@ const Products = (props) => {
               return productFilter.categories.includes(productsByCategory);
             })
             .map((product) => (
-              <div className="Products-item">
+              <div key={product.id} className="Products-item">
                   <img src={product.image} alt={product.title} />
                   <div className="Products-item-info">
                     <div>
@@ -29,7 +29,7 @@ const Products = (props) => {
                       <h4>${product.sellingPrice}</h4>
                   </div>
                     <h6>{product.description}</h6>
-                <button key={product.id} onClick={() => handleAddToCart(product)}>
+                <button  onClick={() => handleAddToCart(product)}>
                   <h3>Add to Cart</h3>
               </button>
                 </div>
