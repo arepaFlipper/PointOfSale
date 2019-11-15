@@ -37,6 +37,16 @@ const reducer = (state, action) => {
         ...state,
         products: state.products.filter(product => product.id !== action.payload)
       }
+    case 'UPDATE_PRODUCT':
+      return {
+        ...state,
+        products: state.products.map(product => {
+          if( product.id === action.payload.id){
+            return action.payload;
+          }
+          return product;
+        })
+      } 
     default:
       return state;
   }

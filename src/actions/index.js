@@ -32,3 +32,8 @@ export const removeProduct = (payload) => ({
   type: 'REMOVE_PRODUCT',
   payload,
 });
+
+export const updateProduct = (payload) => ({
+  type: 'UPDATE_PRODUCT',
+  payload,
+});

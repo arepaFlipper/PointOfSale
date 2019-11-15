@@ -1,17 +1,19 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { addNewProduct } from '../../actions/index';
+import { updateProduct } from '../../actions/index';
 import '../../assets/styles/components/coomponents/AddProduct.scss';
 
-const AddProduct = (props) => {
+const UpdateProduct = (props) => {
+
+  const getProductToUpdate = JSON.parse(sessionStorage.getItem("updateId"));
 
   const [form, setValues] = React.useState({
-    id: '',
-    title: "", 
-    categories: [], 
-    inStock: 0, 
-    buyingPrice: 0, 
-    sellingPrice: 0
+    id: getProductToUpdate.id,
+    title:  getProductToUpdate.title, 
+    categories: getProductToUpdate.categories, 
+    inStock: getProductToUpdate.inStock, 
+    buyingPrice: getProductToUpdate.buyingPrice, 
+    sellingPrice: getProductToUpdate.sellingPrice,
   });
 
   const handleInput = (event) => {
@@ -23,19 +25,20 @@ const AddProduct = (props) => {
   
   const handleSummit = (event) => {
     event.preventDefault();
-    props.addNewProduct(form);
+    props.updateProduct(form);
     props.history.push('/products');
   }
   return(
     <div className="Management">
       <section className='Add__container'>
         <h2>
-            ADD NEW PRODUCT
+            Update Product: {getProductToUpdate.title}
         </h2>
 
         <form className='Add__container--form' onSubmit={handleSummit} >
           <input
             name='title'
+            value={form.title}
             className='input-name'
             type='text'
             placeholder='Product Title'
@@ -43,6 +46,7 @@ const AddProduct = (props) => {
           />
           <select
            name="categories"
+           value={form.categories[0]}
            placeholder="Select an existing category" 
            required
            onChange={handleInput}
@@ -61,6 +65,7 @@ const AddProduct = (props) => {
           <div className="horizonter">
             <input
               name='inStock'
+              value={form.inStock}
               className='add-input'
               type='number'
               min="0"
@@ -69,6 +74,7 @@ const AddProduct = (props) => {
             />
             <input
               name='buyingPrice'
+              value={form.buyingPrice}
               className='add-input'
               type='number'
               min='0'
@@ -79,6 +85,7 @@ const AddProduct = (props) => {
             />
             <input
               name='sellingPrice'
+              value={form.sellingPrice}
               className='add-input'
               type='number'
               min='0'
@@ -91,7 +98,7 @@ const AddProduct = (props) => {
           </div>
           <div className="Add__container--form__button">
           <button className='button' type="submit">
-              Add product
+              Update product
           </button>
           </div>
         </form>
@@ -107,7 +114,7 @@ const mapStateToProps = state => {
 };
 
 const mapDispatchToProps = {
-  addNewProduct,
+  updateProduct,
 }
 
-export default connect(mapStateToProps,mapDispatchToProps)(AddProduct);
+export default connect(mapStateToProps,mapDispatchToProps)(UpdateProduct);
