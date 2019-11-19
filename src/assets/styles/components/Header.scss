@@ -24,20 +24,20 @@
 .header__menu ul {
   display: none;
   list-style: none;
-  margin: 0px 0px 0px -14px;
+  margin: 0px 0px 0px 0px;
   padding: 0px;
-  position: absolute;
   width: 100px;
-  text-align: right;
+  text-align: center;
 } 
 
-// .header__menu:hover ul, ul:hover {
-//     display: block;
-//     position: fixed;
-//     align-items: center;
-//     background: #cc05a1;
-//     border-radius: 5px;
-// }
+.header__menu:hover .header-dropmenu, .header-dropmenu:hover {
+  position: absolute;
+    display: block;
+    // position: fixed;
+    align-items: center;
+    background: #456d56;
+    border-radius: 5px;
+}
 
 .header__menu li {
   margin: 10px 0px;

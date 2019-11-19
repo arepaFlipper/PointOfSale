@@ -14,25 +14,25 @@ const ManagementProd = (props) => {
           <div className="Management-content">
               <div className="Management-item" >
                 <div className="Management-element"> 
-                  <div className="Management-element_id"><h3>ID</h3></div>
-                  <div className="Management-element_title"><h3>Name</h3></div>
-                  <div className="Management-element_container"><h3>Category </h3> </div>
-                  <div className="Management-element_container"><h3> In stock</h3> </div>
-                  <div className="Management-element_container"><h3> Buying price</h3> </div>
-                  <div className="Management-element_container"><h3> selling price</h3> </div>
-                  <div className="Management-element_container"><h3> Edit product</h3> </div>
-                  <div className="Management-element_container"><h3> Remove product</h3> </div>
+                  <div className="Management-element_id"><h5>ID</h5></div>
+                  <div className="Management-element_title"><h5>Name</h5></div>
+                  <div className="Management-element_container"><h5>Category </h5> </div>
+                  <div className="Management-element_container"><h5> In stock</h5> </div>
+                  <div className="Management-element_container"><h5> Buying price</h5> </div>
+                  <div className="Management-element_container"><h5> selling price</h5> </div>
+                  <div className="Management-element_container"><h5> Edit product</h5> </div>
+                  <div className="Management-element_container"><h5> Remove product</h5> </div>
                 </div>
                 {
                   products.map((product) =>(
                     
                 <div key={product.id} className="Management-element"> 
                     <div className="Management-element_id">{product.id}</div>
-                    <div className="Management-element-title"><span><h3>{product.title}</h3></span></div>
-                    <div className="Management-element-category"><span><h3>{ product.categories[0] } </h3> </span></div>
-                    <div className="Management-element_container"><span><h3> many</h3> </span></div>
-                    <div className="Management-element_container"><span><h3>${Math.ceil(product.buyingPrice * 100) / 100} </h3> </span></div>
-                    <div className="Management-element_container"><span><h3>${Math.ceil(product.sellingPrice * 100) / 100} </h3> </span></div>
+                    <div className="Management-element-title"><span><h5>{product.title}</h5></span></div>
+                    <div className="Management-element-category"><span><h5>{ product.categories[0] } </h5> </span></div>
+                    <div className="Management-element_container"><span><h5> many</h5> </span></div>
+                    <div className="Management-element_container"><span><h5>${Math.ceil(product.buyingPrice * 100) / 100} </h5> </span></div>
+                    <div className="Management-element_container"><span><h5>${Math.ceil(product.sellingPrice * 100) / 100} </h5> </span></div>
                     <div><Link to="/edit" id="trash" className="far fa-edit" onClick={() => sessionStorage.setItem("updateId",JSON.stringify(product))} /></div>
                     <div><i id="trash" className="fas fa-trash-alt" onClick={() => props.removeProduct(product.id)} /></div>
                 </div>

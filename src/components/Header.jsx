@@ -26,18 +26,18 @@ const Header = (props) => {
           }
           <p>Perfil</p>
         </div>
-        <ul>
+        <ul className="header-dropmenu">
 
           {hasUser ?
-            <li><a href="">{user.name}</a></li>
+            <li><a href="/login">{user.name}</a></li>
             :null
           }
           {hasUser ?
             <li><a href="#logout" onClick={handleLogout}>Logout</a></li>
             :
             <li>
-              <Link to='/'>LOGIN</Link>
-            </li>
+              <a href='/'>LOGIN</a>
+           </li>
           }
 
 

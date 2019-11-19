@@ -26,10 +26,10 @@
   justify-items: center;
   border: 1px solid black;
   grid-template-areas: "name uPrice qty tPrice trash";
-  grid-template-columns: 4vw 2fr repeat(7, 1fr);
+  grid-template-columns: 4vw 2fr repeat(6, 1fr);
   justify-content: space-between;
   align-items: center;
-  width: 95vw;
+  width: auto;
   border: 1px solid #eee;
 }
 .Management-element_id {
@@ -38,7 +38,7 @@
 
 }
 .Management-element_container {
-  width: 100px;
+  width: auto;
 }
 .Management-element-title {
   width: auto;
