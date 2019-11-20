@@ -9,8 +9,8 @@
     "server": "json-server locations.json",
     "format": "prettier --write '{*.js,src/**/*.{js,jsx}}'",
     "lint": "eslint src/",
-    "start:dev": "DEBUG=app:* nodemon index",
-    "start:prod": "NODE_ENV=production node index"
+    "start:dev": "DEBUG=app:* nodemon src/server/index",
+    "start:prod": "NODE_ENV=production node src/server/index"
   },
   "repository": {
     "type": "git",
