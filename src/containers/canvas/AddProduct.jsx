@@ -47,7 +47,7 @@ const AddProduct = (props) => {
            required
            onChange={handleInput}
            >
-            {/* <option value="selected" disabled>Select an existing category </option> */}
+            <option value="selected" disabled>Select an existing category </option>
             {props.categories.map((category)=>(
               <option
                key={category.id}

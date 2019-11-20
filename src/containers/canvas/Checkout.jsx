@@ -2,9 +2,20 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { removeFromCart } from '../../actions';
 import '../../assets/styles/components/coomponents/Checkout.scss';
+import * as jsPDF from 'jspdf';
 
 const Checkout = (props) => {
   const { cart } = props;
+  const receiptGenerator = (cartList) => {
+    cartList.map(item => (item))
+    let item = cartList[0];
+    console.log(item);
+    let doc = new jsPDF();
+    doc.text(`${JSON.stringify(item)}`, 10, 10);
+    doc.text('did it work?', 80, 90);
+    doc.save('test.pdf')
+  }
+
   return (
     <div className="Checkout">
       <div className="Checkout-content">
@@ -40,7 +51,7 @@ const Checkout = (props) => {
           <h4>$ {`${cart.reduce(
             (accumulate, item) =>
             Math.ceil(accumulate + item.product.sellingPrice * item.amount * 100), 0) / 100}`}</h4>
-          <button>Buy order</button>
+          <button onClick={()=> receiptGenerator(cart)}>Buy order</button>
         </div>
       )}
     </div>
