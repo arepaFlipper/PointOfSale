@@ -2,11 +2,13 @@
 import { connect } from 'react-redux';
 import { addToCart } from '../actions';
 import '../assets/styles/components/coomponents/Products.scss';
+import { auxAddToCart } from './auxReducers'
 
 const Products = (props) => {
-  const { products, productsByCategory } = props;
+  const { cart, products, productsByCategory } = props;
   const handleAddToCart = (product) => {
-    props.addToCart(product);
+    const productToCart = auxAddToCart( cart.slice(), product);
+    props.addToCart(productToCart);
   }
 
   return (
@@ -45,6 +47,7 @@ const mapStateToProps = state => {
   return {
     products: state.products,
     productsByCategory: state.productsByCategory,
+    cart: state.cart,
   };
 };
 

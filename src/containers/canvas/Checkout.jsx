@@ -22,9 +22,9 @@ const Checkout = (props) => {
               <div className ="fas fa-trash-alt"></div>
             </div>
           </div>
-        {cart.map((item, index) => (
+        {cart.map((item,index) => (
           <div className="Checkout-item" key={index}>
-            <div className="Checkout-element"> 
+            <div className="Checkout-element" key={item}> 
               <div className="Checkout-element_title"><h4>{item.product.title}</h4></div>
               <div className="Checkout-element_container"><span>$ {item.product.sellingPrice}</span></div>
               <div className="Checkout-element_container"><span>x {item.amount}</span></div>

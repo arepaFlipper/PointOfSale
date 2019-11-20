@@ -1,5 +1,3 @@
-import { auxAddToCart } from './auxReducers';
-
 const reducer = (state, action) => {
   switch (action.type) {
     case 'LOGIN_REQUEST':
@@ -15,7 +13,7 @@ const reducer = (state, action) => {
     case 'ADD_TO_CART':
       return {
         ...state,
-        cart: auxAddToCart(state.cart.slice(), action.payload)
+        cart:  action.payload
       }
     case 'REMOVE_FROM_CART':
       return {
