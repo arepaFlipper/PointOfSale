@@ -7,12 +7,15 @@ import * as jsPDF from 'jspdf';
 const Checkout = (props) => {
   const { cart } = props;
   const receiptGenerator = (cartList) => {
-    
-    let title = cartList[0].product.title;
-    
+    let i = 2;
+  
     let doc = new jsPDF();
-    doc.text(`${JSON.stringify(title)}`, 10, 10);
-    doc.text('did it work?', 80, 90);
+    doc.text('RECEIPT',80, 10);
+    cartList.map(item=>{
+      i++;
+      doc.text(`${JSON.stringify(item.product.title)} ..... \$${JSON.stringify(item.product.sellingPrice)}`, 10, i*10)
+    }
+    )
     doc.save('test.pdf')
   }
 
