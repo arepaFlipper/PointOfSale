@@ -22,7 +22,7 @@ const Header = (props) => {
         <div className='header__menu--profile'>
           {hasUser ?
             (<img src={gravatar(user.email)} alt={user.email} />):
-            (<img src={'/src/assets/static/user-icon.png'} alt='' />)
+            (<img src={'/src/frontend/assets/static/user-icon.png'} alt='' />)
           }
           <p>Perfil</p>
         </div>
