@@ -16,7 +16,7 @@ const Header = (props) => {
   return (
     <header className='header'>
       <Link to='/spa'>
-        <img className='header__img' src='src/assets/static/pos.png' alt='Point Of Sale' />
+        <img className='header__img' src='src/frontend/assets/static/pos.png' alt='Point Of Sale' />
       </ Link>
       <div className='header__menu'>
         <div className='header__menu--profile'>
