@@ -10,7 +10,8 @@
     "format": "prettier --write '{*.js,src/**/*.{js,jsx}}'",
     "lint": "eslint src/",
     "start:dev": "DEBUG=app:* nodemon src/server/index",
-    "start:prod": "NODE_ENV=production node src/server/index"
+    "start:prod": "NODE_ENV=production node src/server/index",
+    "inspect": "DEBUG=express*,app* nodemon --inspect src/server/index"
   },
   "repository": {
     "type": "git",
