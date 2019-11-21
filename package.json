@@ -42,6 +42,7 @@
     "jspdf": "^1.5.3",
     "md5": "^2.2.1",
     "mini-css-extract-plugin": "^0.7.0",
+    "mongodb": "^3.3.4",
     "prop-types": "^15.7.2",
     "react": "^16.10.1",
     "react-dom": "^16.10.1",
