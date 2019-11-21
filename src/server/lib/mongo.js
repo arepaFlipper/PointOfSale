@@ -1,8 +1,8 @@
-const { MongoClient } = require('mongodb');
-const { config } = require('../config');
+const { MongoClient, ObjectId} = require('mongodb');
+const { config } = require('../config/index');
 
 const USER = encodeURIComponent(config.dbUser);
-const PASSWORD = encodeURIComponent(config.dbUser);
+const PASSWORD = encodeURIComponent(config.dbPassword);
 const DB_NAME = config.dbName;
 
 const MONGO_URI = `mongodb+srv://${USER}:${PASSWORD}@${config.dbHost}:${config.dbPort}/${DB_NAME}?retryWrites=true&w=majority`;
