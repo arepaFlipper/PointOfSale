@@ -1,6 +1,6 @@
 {
   "name": "PointOfSale",
-  "homepage": "https://github.com/crizy182/PointOfSale",
+  "homepage": "https://crizy182.github.io/PointOfSale",
   "version": "1.0.0",
   "description": "This repository has a project about a storage system at a warehouse inventory. It has been developed with the acquired knowledge in the school of Javascript by Platzi.",
   "main": "index.js",
