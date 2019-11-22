@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/PointOfSale/precache-manifest.10f4dad2d3895dbd969225854ed88cb3.js"
+  "/PointOfSale/precache-manifest.a6f660dfd492dde22f3ffbafba280ab0.js"
 );
 
 self.addEventListener('message', (event) => {
