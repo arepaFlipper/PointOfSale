@@ -11,7 +11,9 @@
     "lint": "eslint src/",
     "start:dev": "DEBUG=app:* nodemon src/backend/index",
     "start:prod": "NODE_ENV=production node src/frontend/index",
-    "inspect": "DEBUG=express*,app* nodemon --inspect src/backend/index"
+    "inspect": "DEBUG=express*,app* nodemon --inspect src/backend/index",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "repository": {
     "type": "git",
@@ -28,7 +30,7 @@
   "bugs": {
     "url": "https://github.com/crizy182/PointOfSale/issues"
   },
-  "homepage": "https://github.com/crizy182/PointOfSale#readme",
+  "homepage": "https://crizy182.github.io/PointOfSale",
   "dependencies": {
     "@babel/core": "^7.6.2",
     "@babel/preset-env": "^7.6.2",
@@ -70,6 +72,7 @@
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-prettier": "^3.1.1",
     "eslint-plugin-react": "^7.14.3",
+    "gh-pages": "^2.1.1",
     "html-loader": "^0.5.5",
     "html-webpack-plugin": "^3.2.0",
     "json-server": "^0.15.1",
