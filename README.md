@@ -1,9 +1,11 @@
 # PointOfSale
-This Web App was initially created by Jorge Nemoga, Cristian Tovar and Santiago Jimenez, using JavaScript, React.js Redux, Webpack and SASS.
+The remainder of this document contains POS proyect. This Web App was initially created by Jorge Nemoga, Cristian Tovar and Santiago Jimenez, using JavaScript, React.js Redux, Webpack and SASS.
 
 POS is a Web App based Point of Sale System, that will allow you to keep tracking of the quantity buying and selling price of the products existing in your warehouse or business. When creating a new products, you can set a quantity,buying and selling price.
 
 If you find any bug, and a fix for that bug, please leave a comment on the github page for this project and i will push the change into the master branch.
+
+You may visit the deployed App at the following link: https://crizy182.github.io/PointOfSale/ 
 
 ## Installing this application is fairly easy, just follow these steps:
   **1.** Download the lastest version using git typing the following command:
