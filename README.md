@@ -12,11 +12,11 @@ If you find any bug, and a fix for that bug, please leave a comment on the githu
 
   **2.** install the dependecies:
 
-        `$ npm install`
+        $ npm install
         
   **3.** Run the following command on the project's folder:
   
-        `$ npm run start`
+        $ npm run start
 
 
 ## General Purpose of the Project
@@ -68,5 +68,8 @@ The objective of this system is to keep the inventory updated according to the s
 
 ## Additional technical requirements
 The system must work on cloud
+
+# Notes
+  * Speacial thanks to Platzi and its mentors for providing us the acknoledge to make this Web.
 
 # Don't forget to give us feedback, anyone will be welcomed :)
