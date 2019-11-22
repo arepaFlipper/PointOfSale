@@ -72,6 +72,6 @@ The objective of this system is to keep the inventory updated according to the s
 The system must work on cloud
 
 # Notes
-  * Speacial thanks to Platzi and its mentors for providing us the acknoledge to make this Web.
+  * Speacial thanks to Platzi and its mentors for providing us the acknoledge to make this Web App   happen.
 
 # Don't forget to give us feedback, anyone will be welcomed :)
