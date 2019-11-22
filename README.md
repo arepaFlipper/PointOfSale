@@ -8,7 +8,7 @@ If you find any bug, and a fix for that bug, please leave a comment on the githu
 ## Installing this application is fairly easy, just follow these steps:
   **1.** Download the lastest version using git typing the following command:
 
-         `$ git clone git@github.com:crizy182/PointOfSale.git`
+         $ git clone git@github.com:crizy182/PointOfSale.git
 
   **2.** install the dependecies:
 
