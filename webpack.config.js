@@ -1,6 +1,8 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const autoprefixer = require('autoprefixer');
+const webpack = require('webpack');
 
 module.exports = {
   entry: './src/frontend/index.js',
@@ -42,7 +44,7 @@ module.exports = {
           { loader: MiniCssExtractPlugin.loader },
           'css-loader',
           'sass-loader',
-          'stylus-loader',
+          'postcss-loader',
         ],
       },
     ],
@@ -51,6 +53,13 @@ module.exports = {
     historyApiFallback: true,
   },
   plugins: [
+    new HtmlWebpackPlugin.LoaderOptionsPlugin({
+      options: {
+        postcss: [
+          autoprefixer(),
+        ],
+      },
+    }),
     new HtmlWebpackPlugin({
       template: './public/index.html',
       filename: './index.html',
