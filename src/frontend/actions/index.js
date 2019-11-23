@@ -37,3 +37,8 @@ export const updateProduct = (payload) => ({
   type: 'UPDATE_PRODUCT',
   payload,
 });
+
+export const signupRequest = (payload) => ({
+  type: 'SIGNUP_REQUEST',
+  payload,
+});

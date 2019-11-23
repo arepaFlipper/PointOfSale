@@ -1,5 +1,10 @@
 const reducer = (state, action) => {
   switch (action.type) {
+    case 'SIGNUP_REQUEST':
+      return {
+        ...state,
+        user:  action.payload
+      }
     case 'LOGIN_REQUEST':
       return {
         ...state,
@@ -43,8 +48,9 @@ const reducer = (state, action) => {
             return action.payload;
           }
           return product;
-        })
-      } 
+      })
+    } 
+
     default:
       return state;
   }
