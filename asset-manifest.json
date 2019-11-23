@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/PointOfSale/static/css/main.18145a6a.chunk.css",
-    "main.js": "/PointOfSale/static/js/main.ccb2898a.chunk.js",
-    "main.js.map": "/PointOfSale/static/js/main.ccb2898a.chunk.js.map",
+    "main.css": "/PointOfSale/static/css/main.edd5d8c3.chunk.css",
+    "main.js": "/PointOfSale/static/js/main.df29084d.chunk.js",
+    "main.js.map": "/PointOfSale/static/js/main.df29084d.chunk.js.map",
     "runtime-main.js": "/PointOfSale/static/js/runtime-main.41e7dab5.js",
     "runtime-main.js.map": "/PointOfSale/static/js/runtime-main.41e7dab5.js.map",
     "static/js/2.c2be88b7.chunk.js": "/PointOfSale/static/js/2.c2be88b7.chunk.js",
     "static/js/2.c2be88b7.chunk.js.map": "/PointOfSale/static/js/2.c2be88b7.chunk.js.map",
     "index.html": "/PointOfSale/index.html",
-    "precache-manifest.8fd671bc1893f8f6fbac17ba258659f1.js": "/PointOfSale/precache-manifest.8fd671bc1893f8f6fbac17ba258659f1.js",
+    "precache-manifest.c8ba2da4bc2afbf31bb52f4099c6c940.js": "/PointOfSale/precache-manifest.c8ba2da4bc2afbf31bb52f4099c6c940.js",
     "service-worker.js": "/PointOfSale/service-worker.js",
-    "static/css/main.18145a6a.chunk.css.map": "/PointOfSale/static/css/main.18145a6a.chunk.css.map"
+    "static/css/main.edd5d8c3.chunk.css.map": "/PointOfSale/static/css/main.edd5d8c3.chunk.css.map"
   },
   "entrypoints": [
     "static/js/runtime-main.41e7dab5.js",
     "static/js/2.c2be88b7.chunk.js",
-    "static/css/main.18145a6a.chunk.css",
-    "static/js/main.ccb2898a.chunk.js"
+    "static/css/main.edd5d8c3.chunk.css",
+    "static/js/main.df29084d.chunk.js"
   ]
 }
