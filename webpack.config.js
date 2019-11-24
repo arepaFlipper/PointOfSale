@@ -53,7 +53,7 @@ module.exports = {
     historyApiFallback: true,
   },
   plugins: [
-    new HtmlWebpackPlugin.LoaderOptionsPlugin({
+    new webpack.LoaderOptionsPlugin({
       options: {
         postcss: [
           autoprefixer(),
