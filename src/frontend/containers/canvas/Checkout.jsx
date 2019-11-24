@@ -2,21 +2,33 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { removeFromCart } from '../../actions';
 import '../../assets/styles/components/coomponents/Checkout.scss';
-import * as jsPDF from 'jspdf';
+
+
+global.window = {document: {createElementNS: () => {return {}} }};
+global.navigator = {};
+global.btoa = () => {};
+
+//const fs = require('fs')
+const jsPDF = require('jspdf/dist/jspdf.node.min')
 
 const Checkout = (props) => {
   const { cart } = props;
   const receiptGenerator = (cartList) => {
     let i = 2;
-  
-    let doc = new jsPDF();
-    doc.text('RECEIPT',80, 10);
-    cartList.map(item=>{
-      i++;
-      doc.text(`${JSON.stringify(item.product.title)} ..... \$${JSON.stringify(item.product.sellingPrice)}`, 10, i*10)
+    if(process.env.BROWSER){
+      let doc = new jsPDF();
+      doc.text('RECEIPT',80, 10);
+      cartList.map(item=>{
+        i++;
+        doc.text(`${JSON.stringify(item.product.title)} ..... \$${JSON.stringify(item.product.sellingPrice)}`, 10, i*10)
+      }
+      )
+      doc.save('receipt.pdf');
+
+      delete global.window;
+      delete global.navigator;
+      delete global.btoa;
     }
-    )
-    doc.save('test.pdf')
   }
 
   return (

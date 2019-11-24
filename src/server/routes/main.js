@@ -11,12 +11,12 @@ import reducer from '../../frontend/reducers';
 import initialState from '../../frontend/mocks/initialState';
 import render from '../render';
 
-const preloadedState = store.getState();
-res.send(render(html, preloadedState));
 
 const main = ( req, res, next) => {
   try {
     const store = createStore(reducer, initialState);
+    const preloadedState = store.getState();
+    res.send(render(html, preloadedState));
     const html = renderToString(
       <Provider>
         <staticRouter
