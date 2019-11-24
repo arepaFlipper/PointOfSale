@@ -27,6 +27,7 @@ if(ENV === 'development') {
   };
   app.use(webpackDevMiddleware(compiler, configServer));
   app.use(webpackHotMiddleware(compiler));
+  app.use(express.static(`${__dirname}/public`));
 }
 
 app.get('*',(req,res) => {
