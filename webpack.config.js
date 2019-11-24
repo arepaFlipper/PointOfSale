@@ -6,13 +6,34 @@ const webpack = require('webpack');
 
 module.exports = {
   entry: './src/frontend/index.js',
+  mode: "development",
   output: {
-    path: path.resolve(__dirname, 'dist'),
-    filename: 'bundle.js',
-    publicPath: '/'
+    path: '/',
+    filename: 'assets/app.js',
+    publicPath: '/',
   },
   resolve: {
     extensions: ['.js', '.jsx'],
+  },
+  optimization: {
+    splitChunks: {
+      chunks: 'async',
+      name: true,
+      cacheGroups: {
+        vendors: {
+          name: 'vendors',
+          chunks: 'all',
+          reuseExistingChunk: true,
+          priority: 1,
+          filename: 'assets/vendor.js',
+          enforce: true,
+          test(module, chunks){
+            const name = module.nameForCondition && module.nameForCondition();
+            return chunks.some((chunks) => chunks.name !== 'vendor' && /[\\/]node_modules[\\/]/.test(name));
+          }
+        }
+      }
+    }
   },
   module: {
     rules: [
@@ -53,19 +74,16 @@ module.exports = {
     historyApiFallback: true,
   },
   plugins: [
-    new HtmlWebpackPlugin.LoaderOptionsPlugin({
+    new webpack.HotModuleReplacementPlugin(),
+    new webpack.LoaderOptionsPlugin({
       options: {
         postcss: [
           autoprefixer(),
         ],
       },
     }),
-    new HtmlWebpackPlugin({
-      template: './public/index.html',
-      filename: './index.html',
-    }),
     new MiniCssExtractPlugin({
-      filename: 'assets/[name].css',
+      filename: 'assets/app.css',
     }),
   ],
 };
