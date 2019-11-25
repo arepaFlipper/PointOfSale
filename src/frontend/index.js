@@ -13,7 +13,7 @@ if (typeof window !== 'undefined') {
   if (process.env.NODE_ENV === 'production') composeEnhacers = compose;
   else composeEnhacers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
   const preloadedState = window.__PRELOADED_STATE__;
-  const store = createStore(reducer, initialState, composeEnhacers());
+  const store = createStore(reducer, preloadedState, composeEnhacers());
   const history = createBrowserHistory();
 
   hydrate(
