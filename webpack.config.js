@@ -74,13 +74,16 @@ module.exports = {
     historyApiFallback: true,
   },
   plugins: [
-    new webpack.HotModuleReplacementPlugin(),
     new webpack.LoaderOptionsPlugin({
       options: {
         postcss: [
           autoprefixer(),
         ],
       },
+    }),
+    new HtmlWebpackPlugin({
+      template: './public/index.html',
+      filename: './index.html',
     }),
     new MiniCssExtractPlugin({
       filename: 'assets/app.css',
