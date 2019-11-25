@@ -3,32 +3,19 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const autoprefixer = require('autoprefixer');
 const webpack = require('webpack');
 const dotenv = require('dotenv');
-<<<<<<< HEAD
-const TerserPlugin = require('compression-webpack-plugin');
-
-dotenv.config();
-
-const isProd = (process.env.NODE_ENV === 'production');
-=======
 const TerserPlugin = require('terser-webpack-plugin');
 const CompressionPlugin = require('compression-webpack-plugin');
 const ManifestPlugin = require('webpack-manifest-plugin');
 
 dotenv.config();
 const isProd = process.env.NODE_ENV === 'production';
->>>>>>> hotfix4
 
 module.exports = {
   devtool: isProd ? 'hidden-source-map' : 'cheap-source-map',
   entry: './src/frontend/index.js',
   mode: process.env.NODE_ENV,
   output: {
-<<<<<<< HEAD
-    path: isProd ? 
-      path.join(process.cwd(),'./src/server/public'):'/',
-=======
     path: isProd ? path.join(process.cwd(), 'src/server/public') : '/',
->>>>>>> hotfix4
     filename: isProd ? 'assets/app-[hash].js' : 'assets/app.js',
     publicPath: '/',
   },
@@ -36,13 +23,7 @@ module.exports = {
     extensions: ['.js', '.jsx'],
   },
   optimization: {
-<<<<<<< HEAD
-    minimizer: isProd ? [
-      new TerserPlugin(),
-    ]:[],
-=======
     minimizer: isProd ? [new TerserPlugin()] : [],
->>>>>>> hotfix4
     splitChunks: {
       chunks: 'async',
       name: true,

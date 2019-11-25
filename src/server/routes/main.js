@@ -15,8 +15,7 @@ const render = require('../render');
 const main = ( req, res, next) => {
   try {
     const store = createStore(reducer, initialState);
-    const preloadedState = store.getState();
-    res.send(render(html, preloadedState));
+    //res.send(render(html, preloadedState));
     const html = renderToString(
       <Provider store={store}>
         <StaticRouter
