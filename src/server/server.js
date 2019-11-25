@@ -1,7 +1,7 @@
 import express from 'express';
 import dotenv from 'dotenv';
 import webpack from 'webpack';
-const main = require('./routes/main');
+import main from './routes/main';
 
 dotenv.config();
 
@@ -9,6 +9,7 @@ const ENV = process.env.NODE_ENV;
 const PORT = process.env.PORT || 3000;
 
 const app = express();
+app.use(express.static(`${__dirname}/public`));
 
 if(ENV === 'development') {
   console.log('Loading develop settings');
@@ -27,30 +28,16 @@ if(ENV === 'development') {
   };
   app.use(webpackDevMiddleware(compiler, configServer));
   app.use(webpackHotMiddleware(compiler));
-  app.use(express.static(`${__dirname}/public`));
+} else {
+  console.log(`Loading ${ENV} config`);
+  app.use(helmet());
+  app.use(helmet.permittedCrossDomainPolicies());
+  app.disable('x-powered-by');
 }
 
-app.get('*',(req,res) => {
-  res.send(`
-  <html lang="en">
-  <head>
-      <title>Point Of Sale</title>
-      <script src="https://kit.fontawesome.com/473d269aa9.js"></script>
-  </head>
-  <body>
-      <div id="app"></div>
-      <script src="assets/app.js" type="text/javascript"></script>
-      <script src="assets/vendor.js" type="text/javascript"></script>
-      <script>
-      window.__PRELOADED_STATE__ = ${JSON.stringify(preloadedState).replace(
-        /</g,'\\u003c')}
-      </script>
-  </body>
-  </html>
-  `)
-});
+app.get('*', main);
 
 app.listen(PORT, (err) => {
   if (err) console.log(err);
   console.log(`Server running on ${PORT}`);
-})
+});
