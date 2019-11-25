@@ -1,5 +1,5 @@
 import React from "react";
-import ReactDOM from "react-dom";
+import { hydrate } from "react-dom";
 import { Provider } from "react-redux";
 import { createStore, compose } from "redux";
 import { Router } from 'react-router';
@@ -16,7 +16,7 @@ const composeEnhancers =
 const store = createStore(reducer, initialState, composeEnhancers());
 const history = createBrowserHistory();
 
-ReactDOM.render(
+hydrate(
   <Provider store={store}>
     <Router history={history}>
       <App />
