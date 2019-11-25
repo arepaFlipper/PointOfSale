@@ -40,6 +40,10 @@ app.get('*',(req,res) => {
       <div id="app"></div>
       <script src="assets/app.js" type="text/javascript"></script>
       <script src="assets/vendor.js" type="text/javascript"></script>
+      <script>
+      window.__PRELOADED_STATE__ = ${JSON.stringify(preloadedState).replace(
+        /</g,'\\u003c')}
+      </script>
   </body>
   </html>
   `)
