@@ -82,6 +82,10 @@ module.exports = {
         ],
       },
     }),
+    new HtmlWebpackPlugin({
+      template: './public/index.html',
+      filename: './index.html',
+    }),
     new MiniCssExtractPlugin({
       filename: 'assets/app.css',
     }),
