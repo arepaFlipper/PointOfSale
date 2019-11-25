@@ -2,7 +2,6 @@ import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
 import Login from '../containers/Login';
-
 import Spa from '../containers/Spa';
 import Register from '../containers/Signup';
 import NotFound from '../containers/NotFound';

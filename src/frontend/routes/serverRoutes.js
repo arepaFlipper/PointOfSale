@@ -1,6 +1,6 @@
 import Home from '../containers/Spa';
 import Login from '../containers/Login';
-import Register from 'containers/Register';
+import Register from '../containers/Signup';
 import NotFound from '../containers/NotFound';
 
 const serverRoutes = [
