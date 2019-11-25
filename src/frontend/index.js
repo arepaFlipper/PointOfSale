@@ -2,8 +2,9 @@ import React from "react";
 import ReactDOM from "react-dom";
 import { Provider } from "react-redux";
 import { createStore, compose } from "redux";
+import { Router } from 'react-router';
+import { createBrowserHistory } from 'history';
 import App from "./routes/App";
-import Login from "./containers/Login";
 import reducer from "./reducers";
 import initialState from './mocks/initialState';
 
@@ -13,10 +14,13 @@ const composeEnhancers =
   compose;
 
 const store = createStore(reducer, initialState, composeEnhancers());
+const history = createBrowserHistory();
 
 ReactDOM.render(
   <Provider store={store}>
-    <App />
+    <Router history={history}>
+      <App />
+    </Router>
   </Provider>,
   document.getElementById("app")
 );
