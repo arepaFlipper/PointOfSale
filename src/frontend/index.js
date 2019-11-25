@@ -8,19 +8,20 @@ import App from "./routes/App";
 import reducer from "./reducers";
 import initialState from './mocks/initialState';
 
-const composeEnhancers =
-  (typeof window !== "undefined" &&
-    window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__) ||
-  compose;
+if (typeof window !== 'undefined') {
+  let composeEnhacers;
+  if (process.env.NODE_ENV === 'production') composeEnhacers = compose;
+  else composeEnhacers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+  const preloadedState = window.__PRELOADED_STATE__;
+  const store = createStore(reducer, initialState, composeEnhacers());
+  const history = createBrowserHistory();
 
-const store = createStore(reducer, initialState, composeEnhancers());
-const history = createBrowserHistory();
-
-hydrate(
-  <Provider store={store}>
-    <Router history={history}>
-      <App />
-    </Router>
-  </Provider>,
-  document.getElementById("app")
-);
+  hydrate(
+    <Provider store={store}>
+      <Router history={history}>
+        <App />
+      </Router>
+    </Provider>,
+    document.getElementById("app")
+  );
+}
