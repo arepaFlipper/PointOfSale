@@ -12,7 +12,7 @@ const Home = () => (
   <BrowserRouter>
         <Layout>
           <Switch>
-            <Route exact path="/spa" component={Dashboard} />
+            <Route exact path="/home" component={Dashboard} />
             <Route exact path="/checkout" component={Checkout} />
             <Route exact path="/products" component={ManagementProd} />
             <Route exact path="/cat" component={ManagementCat} />

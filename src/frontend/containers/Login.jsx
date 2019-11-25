@@ -14,7 +14,7 @@ const Login = (props) => {
   const handleSummit = event => {
     event.preventDefault();
     props.loginRequest(form);
-    props.history.push('/spa');
+    props.history.push('/home');
   };
   return (
     <section className="login">

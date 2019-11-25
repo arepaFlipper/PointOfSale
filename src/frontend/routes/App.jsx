@@ -3,7 +3,7 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
 import Login from '../containers/Login';
 
-import Spa from '../containers/Spa';
+import Home from '../containers/Home';
 import Register from '../containers/Signup';
 import NotFound from '../containers/NotFound';
 
@@ -14,7 +14,7 @@ const App = () => (
       <Switch>
         <Route exact path="/" component={Login} />
         <Route exact path="/signup" component={Register} />
-        <Route exact path="/spa" component={Spa} />
+        <Route exact path="/Home" component={Home} />
         <Route component={NotFound} />
       </Switch>
   </BrowserRouter>
