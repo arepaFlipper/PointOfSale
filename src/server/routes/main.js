@@ -1,7 +1,7 @@
 import React from 'react';
-import { renderToString } from 'react-dom';
+import { renderToString } from 'react-dom/server';
 import { Provider } from 'react-redux';
-import { createStore } from 'react-redux';
+import { createStore } from 'redux';
 import { StaticRouter } from 'react-router';
 import { renderRoutes } from 'react-router-config';
 
